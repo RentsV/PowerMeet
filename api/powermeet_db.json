@@ -1,0 +1,54 @@
+{
+  "resource1": [
+    {
+      "value1": "Information",
+      "value2": "Other information",
+      "id": 1
+    },
+    {
+      "value1": "Information",
+      "value2": "Other information",
+      "id": 2
+    },
+    {
+      "value1": "Information",
+      "value2": "Other information",
+      "id": 3
+    },
+    {
+      "value1": "Information",
+      "value2": "Other information",
+      "id": 4
+    }
+  ],
+  "resource2": [
+    {
+      "resource1Id": 1,
+      "value1": "Information",
+      "value2": "Other information",
+      "value3": "Yet more information",
+      "id": 1
+    },
+    {
+      "resource1Id": 3,
+      "value1": "Information",
+      "value2": "Other information",
+      "value3": "Yet more information",
+      "id": 2
+    },
+    {
+      "resource1Id": 2,
+      "value1": "Information",
+      "value2": "Other information",
+      "value3": "Yet more information",
+      "id": 3
+    },
+    {
+      "resource1Id": 4,
+      "value1": "Information",
+      "value2": "Other information",
+      "value3": "Yet more information",
+      "id": 3
+    }
+  ]
+}
