@@ -29,8 +29,8 @@ title: PowerMeet
 description: This is a mock API to simulate the REST interface of an
   imaginary service. PowerMeet helps powerlifters find other lifters, powerlifting-friendly gyms, and local competitions.
 #   !!! CHANGE THIS TO MATCH THE URL OF YOUR PUBLISHED DOCS
-url: https://rentsv.github.io/PowerMeet
-baseurl: "/powermeet"
+url: https://rentsv.github.io/PowerMeet/
+baseurl: "/PowerMeet"
 #
 #   +++ REMOVE IF YOU DON'T WANT THE AUX LINKS AT THE TOP OF THE PAGE
 #       OR ADD MORE LINKS AS SUPPORTED BY THE THEME
@@ -114,7 +114,7 @@ back_to_top_text: "Back to top"
 
 #
 #   !!! CHANGE THIS VALUE TO APPLY TO YOUR DOCUMENTATION
-footer_content: "Copyright &copy; 2025 Reena Vaziri Distributed by an <a href=\"https://raw.githubusercontent.com/uwc2-apidoc/to-do-service-au25/main/LICENSE\">MIT license.</a>"
+footer_content: "Copyright &copy; 2025 Reena Vaziri. Distributed by an <a href=\"https://raw.githubusercontent.com/uwc2-apidoc/to-do-service-au25/main/LICENSE\">MIT license.</a>"
 #
 # - - - - - - - - - - - - - - - - 
 #
