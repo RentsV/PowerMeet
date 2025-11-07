@@ -1,0 +1,904 @@
+openapi: 3.1.0
+
+info:
+  title: PowerMeet API
+  description: A comprehensive API for powerlifters who are looking for suitable gyms. 
+  version: 1.0.0
+  contact:
+    name: PowerMeet Support
+    email: api-support@example.com
+
+servers:
+  - url: http://localhost:3000
+    description: Local server for testing. Often, this is the development server.
+
+tags:
+  - name: Lifters
+    description: Endpoints that provide operations for managing user (lifter) accounts.
+  - name: Gyms
+    description: Endpoints that provide operations for managing gyms.
+
+security:
+  - bearerAuth: []
+
+paths:
+  /lifters:
+    get:
+      summary: Get all lifters
+      description: Returns a list of all lifters in the system. Supports pagination and sorting.
+      tags:
+        - Lifers
+      operationId: getAllLifters
+      parameters:
+        - $ref: '#/components/parameters/PaginationPageParam'
+        - $ref: '#/components/parameters/PaginationPerPageParam'
+        - $ref: '#/components/parameters/SortParam'
+      responses:
+        '200':
+          $ref: '#/components/responses/SuccessGetAllLifters'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/ServerError'
+
+    post:
+      summary: Create a new lifter
+      tags:
+        - Lifters
+      operationId: postNewLifter
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LifterInput'
+            examples:
+              newLifter:
+                $ref: '#/components/examples/NewLifter'
+      responses:
+        '201':
+          $ref: '#/components/responses/SuccessPostOneLifter'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/ServerError'
+
+  /lifters/{id}:
+    get:
+      summary: Get a lifter by ID
+      description: Returns a single lifter based on their unique `id`.
+      tags:
+        - Lifters
+      operationId: getOneLifter
+      parameters:
+        - $ref: '#/components/parameters/LifterIdPathParam'
+      responses:
+        '200':
+          $ref: '#/components/responses/SuccessGetOneLifter'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/ServerError'
+
+    patch:
+      summary: Update a lifter
+      description: Update one or more properties of an existing lifter. The API supports partial updates.
+      tags:
+        - Lifters
+      operationId: patchOneLifter
+      parameters:
+        - $ref: '#/components/parameters/LifterIdPathParam'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LifterPatch'
+            examples:
+              lifterPatch:
+                $ref: '#/components/examples/LifterPatch'
+      responses:
+        '200':
+          $ref: '#/components/responses/SuccessPatchOneLifter'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/ServerError'
+
+    delete:
+      summary: Delete a lifter by ID
+      description: Removes the specified lifter.
+      tags:
+        - Lifters
+      operationId: deleteOneLifter
+      parameters:
+        - $ref: '#/components/parameters/LifterIdPathParam'
+      responses:
+        '204':
+          $ref: '#/components/responses/SuccessDeleteOneLifter'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/ServerError'
+
+  /gyms:
+    get:
+      summary: Get all gyms
+      description: Returns a list of all gyms. Supports pagination and sorting.
+      tags:
+        - Gyms
+      operationId: getAllGyms
+      parameters:
+        - $ref: '#/components/parameters/PaginationPageParam'
+        - $ref: '#/components/parameters/PaginationPerPageParam'
+        - $ref: '#/components/parameters/SortParam'
+      responses:
+        '200':
+          $ref: '#/components/responses/SuccessGetAllGyms'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/ServerError'
+
+    post:
+      summary: Create a new gym
+      tags:
+        - Gyms
+      operationId: postOneGym
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GymInput'
+            examples:
+              newGym:
+                $ref: '#/components/examples/NewGym'
+      responses:
+        '201':
+          $ref: '#/components/responses/SuccessPostOneGym'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/ServerError'
+
+  /gyms/{id}:
+    get:
+      summary: Get a gym by ID
+      description: Returns a single gym based on its unique `id`.
+      tags:
+        - Gyms
+      operationId: getOneGym
+      parameters:
+        - $ref: '#/components/parameters/GymIdPathParam'
+      responses:
+        '200':
+          $ref: '#/components/responses/SuccessGetOneGym'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/ServerError'
+
+    patch:
+      summary: Update a gym
+      description: Update one or more properties of an existing gym. The API supports partial updates.
+      tags:
+        - Gyms
+      operationId: patchOneGym
+      parameters:
+        - $ref: '#/components/parameters/GymIdPathParam'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GymPatch'
+            examples:
+              gymPatch:
+                $ref: '#/components/examples/GymPatch'
+      responses:
+        '200':
+          $ref: '#/components/responses/SuccessPatchOneGym'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/ServerError'
+
+    delete:
+      summary: Delete a gym by ID
+      description: Removes the specified gym.
+      tags:
+        - Gyms
+      operationId: deleteOneGym
+      parameters:
+        - $ref: '#/components/parameters/GymIdPathParam'
+      responses:
+        '204':
+          $ref: '#/components/responses/SuccessDeleteOneGym'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/ServerError'
+
+components:
+  parameters:
+    PaginationPageParam:
+      name: _page
+      in: query
+      description: Page number for paginated results (zero-indexed).
+      schema:
+        type: integer
+        minimum: 0
+        default: 0
+      example: 0
+
+    PaginationPerPageParam:
+      name: _perPage
+      in: query
+      description: Number of items per page (maximum 100).
+      schema:
+        type: integer
+        minimum: 1
+        maximum: 100
+        default: 20
+      example: 20
+
+    SortParam:
+      name: _sort
+      in: query
+      description: Field to sort by, prefixed with `-` to indicate descending order.
+      schema:
+        type: string
+      examples:
+        ascendingByName:
+          value: "firstName"
+          summary: Sort by first name ascending
+        descendingByRating:
+          value: "rating"
+          summary: Sort by rating descending
+
+    LifterIdPathParam:
+      name: id
+      in: path
+      required: true
+      description: The unique `id` of the `lifter` resource to retrieve.
+      schema:
+        type: integer
+
+    GymIdPathParam:
+      name: id
+      in: path
+      required: true
+      description: The unique `id` of the `gym` resource to retrieve.
+      schema:
+        type: integer
+
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+
+  schemas:
+    Lifter:
+      type: object
+      properties:
+        id:
+          $ref: '#/components/schemas/LifterId'
+        lastName:
+          $ref: '#/components/schemas/LastName'
+        firstName:
+          $ref: '#/components/schemas/FirstName'
+        email:
+          $ref: '#/components/schemas/ContactEmail'
+      required:
+        - id
+        - lastName
+        - firstName
+        - email
+      description: Represents a lifter in the system with unique ID, name, and contact email. 
+        Lifters must create a `lifter` resource before adding `gym` resources.
+        Once registered, there is no limit to the number of gyms that a lifter can add or manage.
+
+    LifterInput:
+      type: object
+      properties:
+        lastName:
+          $ref: '#/components/schemas/LastName'
+        firstName:
+          $ref: '#/components/schemas/FirstName'
+        email:
+          $ref: '#/components/schemas/ContactEmail'
+      required:
+        - lastName
+        - firstName
+        - email
+      description: Contains the data needed to create a new lifter.
+        The `POST /lifters` operation uses this schema for the request body.
+        The API ensures a unique `email` value and generates a unique `id` for the new lifter.
+
+    LifterPatch:
+      type: object
+      properties:
+        lastName:
+          $ref: '#/components/schemas/LastName'
+        firstName:
+          $ref: '#/components/schemas/FirstName'
+        email:
+          $ref: '#/components/schemas/ContactEmail'
+      minProperties: 1
+      description: Contains the data you can update for an existing lifter.
+        The `PATCH /lifters/{id}` operation uses this schema for partial updates,
+        so you can provide only the fields that you want to change.
+        The API ensures `email` remains unique across all lifters.
+
+    Gym:
+      type: object
+      properties:
+        lifterId:
+          $ref: '#/components/schemas/LifterId'
+        name:
+          $ref: '#/components/schemas/GymName'
+        description:
+          $ref: '#/components/schemas/GymDescription'
+        location:
+          $ref: '#/components/schemas/GymLocation'
+        rating:
+          $ref: '#/components/schemas/GymRating'
+        id:
+          $ref: '#/components/schemas/GymId'
+      required:
+        - lifterId
+        - name
+        - description
+        - location
+        - rating
+        - id
+      description: Represents a gym with unique lifter ID, name, 
+        description, location, rating, and gym ID.
+
+    GymInput:
+      type: object
+      properties:
+        lifterId:
+          $ref: '#/components/schemas/LifterId'
+        name:
+          $ref: '#/components/schemas/GymName'
+        description:
+          $ref: '#/components/schemas/GymDescription'
+        location:
+          $ref: '#/components/schemas/GymLocation'
+        rating:
+          $ref: '#/components/schemas/GymRating'
+      required:
+        - lifterId
+        - name
+        - description
+        - location
+        - rating
+      description: Contains the data needed to create a new gym.
+        The `POST /gyms` operation uses this schema for the request body.
+        The API doesn't check for duplicates, so similar gyms may exist.
+        The API requires a valid `lifterId` and generates a unique new ID for the gym.
+
+    GymPatch:
+      type: object
+      properties:
+        lifterId:
+          $ref: '#/components/schemas/LifterId'
+        name:
+          $ref: '#/components/schemas/GymName'
+        description:
+          $ref: '#/components/schemas/GymDescription'
+        location:
+          $ref: '#/components/schemas/GymLocation'
+        rating:
+          $ref: '#/components/schemas/GymRating'
+      minProperties: 1
+      description: Contains the data you can update for an existing gym.
+        The `PATCH /gyms/{id}` operation uses this schema to support partial updates.
+
+    Error:
+      type: object
+      required:
+        - code
+        - message
+      properties:
+        code:
+          $ref: '#/components/schemas/ErrorCode'
+        message:
+          $ref: '#/components/schemas/ErrorMessage'
+        details:
+          type: array
+          description: Additional error details when available.
+          items:
+            type: object
+            properties:
+              field:
+                type: string
+                description: The field that caused the error.
+                examples:
+                  - value: "email"
+              reason:
+                type: string
+                description: Specific reason for the error.
+                examples:
+                  - value: "Invalid format"
+                  - value: "Is required"
+              location:
+                type: string
+                description: Where the error occurred (query, path, body).
+                examples:
+                  - value: "body"
+        requestId:
+          $ref: '#/components/schemas/RequestId'
+      description: Describes the structure of an error response,
+        including the error code, message, and optional details.
+
+    ErrorCode:
+      type: string
+      description: Error code that identifies the type of error.
+      examples:
+        - value: "INVALID_FIELD"
+        - value: "MISSING_REQUIRED_FIELD"
+        - value: "RESOURCE_NOT_FOUND"
+
+    ErrorMessage:
+      type: string
+      description: Human-readable error message.
+      examples:
+        - value: "The field `email` must be a valid email address."
+        - value: "The `lastName` field is required."
+        - value: "The requested resource could not be found."
+
+    RequestId:
+      type: string
+      description: Request identifier for troubleshooting.
+      examples:
+        - value: "req-f8d31a62-e789-4856-9452-5efa50223c7a"
+
+    LifterId:
+      description: The unique ID of the lifter's account in the service to which this gym belongs.
+      type: integer
+
+    LastName:
+      description: The lifter's last name.
+      type: string
+      minLength: 1
+      maxLength: 100
+
+    FirstName:
+      description: The lifter's first name.
+      type: string
+      minLength: 1
+      maxLength: 100
+
+    ContactEmail:
+      description: The lifter's email address.
+      type: string
+      pattern: "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$"
+      maxLength: 255
+      minLength: 3
+      format: email
+
+    GymId:
+      description: The system-defined, unique ID that identifies the gym.
+      minimum: 1
+      type: integer
+
+    GymName:
+      description: The name of the gym.
+      type: string
+      minLength: 1
+      maxLength: 80
+
+    GymDescription:
+      description: The detailed description of the gym.
+      type: string
+      minLength: 1
+      maxLength: 255
+
+    Location:
+      description: The location of the gym.
+      type: string
+      minLength: 1
+      maxLength: 80
+
+    GymRating:
+      description: The rating of a gym, from 1 to 5.
+      type: integer
+      minimum: 1
+      maximum: 5
+
+  responses:
+    SuccessGetAllLifters:
+      description: Successful response that returns a list of lifters.
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              lifters:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Lifter'
+          examples:
+            liftersList:
+              $ref: '#/components/examples/LiftersList'
+
+    SuccessGetOneLifter:
+      description: Successful response that returns a single lifter.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Lifter'
+          examples:
+            singleLifter:
+              $ref: '#/components/examples/SingleLifter'
+
+    SuccessPostOneLifter:
+      description: Successful response that returns the newly created lifter.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Lifter'
+          examples:
+            createdLifter:
+              $ref: '#/components/examples/CreatedLifter'
+
+    SuccessPatchOneLifter:
+      description: Successful response that returns the updated lifter.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Lifter'
+          examples:
+            updatedLifter:
+              $ref: '#/components/examples/UpdatedLifter'
+
+    SuccessDeleteOneLifter:
+      description: Confirms successful lifter deletion. Returns no content.
+
+    SuccessGetAllGyms:
+      description: Successful response that returns a list of gyms.
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              gyms:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Gym'
+          examples:
+            gymsList:
+              $ref: '#/components/examples/GymsList'
+
+    SuccessGetOneGym:
+      description: Successful response that returns a single gym.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Gym'
+          examples:
+            singleGym:
+              $ref: '#/components/examples/SingleGym'
+
+    SuccessPostOneGym:
+      description: Successful response that returns the newly created gym.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Gym'
+          examples:
+            createdGym:
+              $ref: '#/components/examples/CreatedGym'
+
+    SuccessPatchOneGym:
+      description: Successful response that returns the updated gym.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Gym'
+          examples:
+            updatedGym:
+              $ref: '#/components/examples/UpdatedGym'
+
+    SuccessDeleteOneGym:
+      description: Confirms successful gym deletion. Returns no content.
+
+    BadRequest:
+      description: The request was malformed or contains invalid parameters.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+          examples:
+            invalidParameter:
+              summary: Invalid parameter
+              description: The request contains values that fail validation,
+                such as an incorrectly formatted `email` or a non-existent `lifterId`.
+              value:
+                code: "INVALID_FIELD"
+                message: "The field `email` must be a valid email address"
+                details:
+                  - field: "email"
+                    reason: "Invalid format"
+                    location: "body"
+                requestId: "req-f8d31a62-e789-4856-9452-5efa50223c7a"
+            missingRequired:
+              summary: Missing required field
+              value:
+                code: "MISSING_REQUIRED_FIELD"
+                message: "The `lastName` field is required."
+                details:
+                  - field: "lastName"
+                    reason: "Is required"
+                    location: "body"
+                requestId: "req-f8d31a62-e789-4856-9452-5efa50223c7a"
+
+    Unauthorized:
+      description: Authentication is required or the provided credentials are invalid.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+          example:
+            code: "UNAUTHORIZED"
+            message: "Authentication is required to access this resource"
+            requestId: "req-f8d31a62-e789-4856-9452-5efa50223c7a"
+
+    Forbidden:
+      description: The authenticated lifter does not have permission to access the requested resource.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+          example:
+            code: "FORBIDDEN"
+            message: "You do not have permission to access this resource"
+            requestId: "req-f8d31a62-e789-4856-9452-5efa50223c7a"
+
+    NotFound:
+      description: The requested resource was not found.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+          example:
+            code: "RESOURCE_NOT_FOUND"
+            message: "The requested resource could not be found"
+            requestId: "req-f8d31a62-e789-4856-9452-5efa50223c7a"
+
+    TooManyRequests:
+      description: The client has sent too many requests in a given amount of time.
+      headers:
+        Retry-After:
+          schema:
+            type: integer
+          description: Number of seconds to wait before making a new request.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+          example:
+            code: "RATE_LIMIT_EXCEEDED"
+            message: "Rate limit exceeded. Try again in 30 seconds"
+            requestId: "req-f8d31a62-e789-4856-9452-5efa50223c7a"
+
+    ServerError:
+      description: An unexpected server error occurred.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+          example:
+            code: "SERVER_ERROR"
+            message: "An unexpected error occurred. Please try again later"
+            requestId: "req-f8d31a62-e789-4856-9452-5efa50223c7a"
+
+  examples:
+    LiftersList:
+      summary: List of lifters
+      value:
+        lifters:
+          - id: 1
+            lastName: "Johnson"
+            firstName: "Tara"
+            email: "tara.johnson@example.com"
+          - id: 2
+            lastName: "Nguyen"
+            firstName: "Chris"
+            email: "chris.nguyen@example.com"
+          - id: 3
+            lastName: "Miller"
+            firstName: "Devon"
+            email: "devon.miller@example.com"
+          - id: 4
+            lastName: "Santos"
+            firstName: "Rafael"
+            email: "rafael.santos@example.com"
+
+    NewLifter:
+      summary: Example of new lifter data
+      value:
+        lastName: "Doe"
+        firstName: "John"
+        email: "j.doe@example.com"
+
+    CreatedLifter:
+      summary: Example of newly created lifter
+      value:
+        id: 5
+        lastName: "Doe"
+        firstName: "John"
+        email: "j.doe@example.com"
+
+    SingleLifter:
+      summary: Example of a single lifter
+      value:
+        id: 1
+        lastName: "Smith"
+        firstName: "Ferdinand"
+        email: "f.smith@example.com"
+
+    LifterPatch:
+      summary: Example of lifter patch data
+      value:
+        email: "new.email@example.com"
+
+    UpdatedLifter:
+      summary: Example of updated lifter
+      value:
+        id: 1
+        lastName: "Smith"
+        firstName: "Ferdinand"
+        email: "new.email@example.com"
+
+    GymsList:
+      summary: List of gyms
+      value:
+        gyms:
+          - lifterId: 1
+            name: "Iron Temple Barbell Club"
+            description: "Specializes in powerlifting with combo racks, chalk-friendly policy, and calibrated plates."
+            location: "Newark, NJ"
+            rating: 5
+            id: 1
+          - lifterId: 2
+            name: "Foundry Strength and Conditioning"
+            description: "Strongman and powerlifting gym with open platform space and deadlift bars."
+            location: "Jersey City, NJ"
+            rating: 4
+            id: 2
+          - lifterId: 3
+            name: "Atlas Performance Center"
+            description: "Modern gym offering Eleiko racks and IPF-calibrated plates."
+            location: "Brooklyn, NY"
+            rating: 4
+            id: 3
+          - lifterId: 4
+            name: "Garage Grind Gym"
+            description: "Small private space focused on raw powerlifting training."
+            location: "Harrison, NJ"
+            rating: 5
+            id: 4
+
+    NewGym:
+      summary: Example of new gym data
+      value:
+        lifterId: 1
+        name: "Lift More Gym"
+        description: "Expensive but has all the necessary equipment + sauna."
+        location: "Newark, NJ"
+        rating: 5
+
+    CreatedGym:
+      summary: Example of newly created gym
+      value:
+        lifterId: 4
+        name: "Garage Grind Gym"
+        description: "Small private space focused on raw powerlifting training."
+        location: "Harrison, NJ"
+        rating: 5
+        id: 4
+
+    SingleGym:
+      summary: Example of a single gym
+      value:
+        lifterId: 2
+        name: "Foundry Strength and Conditioning"
+        description: "Strongman and powerlifting gym with open platform space and deadlift bars."
+        location: "Jersey City, NJ"
+        rating: 4
+        id: 2
+
+    GymPatch:
+      summary: Example of gym patch data for updating status
+      value:
+        location: "Tartu, Estonia"
+
+    UpdatedGym:
+      summary: Example of updated gym
+      value:
+        lifterId: 2
+        name: "Foundry Strength and Conditioning"
+        description: "Strongman and powerlifting gym, currently under construction."
+        location: "Jersey City, NJ"
+        rating: 3
+        id: 2

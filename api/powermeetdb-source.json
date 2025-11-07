@@ -31,7 +31,7 @@
       "name": "Iron Temple Barbell Club",
       "description": "Specializes in powerlifting with combo racks, chalk-friendly policy, and calibrated plates.",
       "location": "Newark, NJ",
-      "rating": "5",
+      "rating": 5,
       "id": 1
     },
     {
@@ -39,7 +39,7 @@
       "name": "Foundry Strength and Conditioning",
       "description": "Strongman and powerlifting gym with open platform space and deadlift bars.",
       "location": "Jersey City, NJ",
-      "rating": "4",
+      "rating": 4,
       "id": 2
     },
     {
@@ -47,7 +47,7 @@
       "name": "Atlas Performance Center",
       "description": "Modern gym offering Eleiko racks and IPF-calibrated plates.",
       "location": "Brooklyn, NY",
-      "rating": "4",
+      "rating": 4,
       "id": 3
     },
     {
@@ -55,7 +55,7 @@
       "name": "Garage Grind Gym",
       "description": "Small private space focused on raw powerlifting training.",
       "location": "Harrison, NJ",
-      "rating": "5",
+      "rating": 5,
       "id": 4
     }
   ]
