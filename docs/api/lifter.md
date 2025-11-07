@@ -1,0 +1,69 @@
+---
+# markdownlint-disable
+# vale  off
+layout: default
+nav_order: 5
+has_children: true
+has_toc: false
+# tags used by AI files
+description: "Information about the `lifter` resource"
+tags: 
+    - api
+categories:
+    - api-reference
+ai_relevance: high
+importance: 8
+prerequisites: []
+related_pages: 
+    - /tutorials/add-a-new-lifter
+examples: []
+api_endpoints: 
+    - /lifters
+version: "v1.0"
+last_updated: "2025-11-07"
+# vale  on
+# markdownlint-enable
+---
+
+# `lifter` resource
+
+Base endpoint:
+
+```shell
+
+{server_url}/lifters
+```
+
+Contains information about the lifters of the service.
+
+A lifter resource describes the users associated with the gyms.
+Before you can create a `gym` resource in the service,
+you must create the 'lifter' resource to assign to this `gym`.
+
+Learn more about the [gym resource](gym.md).
+
+## Resource properties
+
+Sample `lifter` resource
+
+```js
+
+{
+    "lastName": "Smith",
+    "firstName": "Ferdinand",
+    "email": "f.smith@example.com",
+    "id": 1
+}
+```
+
+| Property name | Type | Description |
+| ------------- | ----------- | ----------- |
+| `lastName` | string | The lifter's last name |
+| `firstName` | string | The lifter's first name |
+| `email` | string | The lifter's email address |
+| `id` | number | The lifter's unique record ID |
+
+## Read operations
+
+* [Get all lifters](lifters-get-all-lifters.md)
+* [Get lifters by ID](lifters-get-lifter-by-id.md)
