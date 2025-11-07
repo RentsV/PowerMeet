@@ -4,7 +4,7 @@
 layout: default
 nav_order: 2
 # tags used by AI files
-description: Describes how to configure your local computer to run a local instance of the to-do-service.
+description: Describes how to configure your local computer to run a local instance of PowerMeet.
 tags: 
     - introduction
 categories: 
@@ -18,15 +18,15 @@ related_pages:
 examples: []
 api_endpoints: []
 version: "v1.0"
-last_updated: "2025-09-03"
+last_updated: "2025-11-07"
 # vale  on
 # markdownlint-enable
 ---
 
 # Before you start a tutorial
 
-These are the steps you must do before you can run
-the tutorials for the **To-Do Service**.
+These are the steps you must finish before you can run
+the tutorials for **PowerMeet**.
 
 Expect this preparation to take about 20 minutes to complete.
 
@@ -43,7 +43,7 @@ long-term support, also known as _LTS_, version of the Windows, MacOS, or Linux 
 - The following software on your development system:
     - [Git, command line](https://docs.github.com/en/get-started/quickstart/set-up-git)
     - [GitHub Desktop](https://desktop.github.com). This is optional, but recommended.
-    - A fork of the [To-Do-Service repository](https://github.com/UWC2-APIDOC/to-do-service-au25)
+    - A fork of the [PowerMeet repository](https://github.com/RentsV/PowerMeet)
     - A [current or LTS version of `node.js`](https://nodejs.org/en/download)
     - Version 0.17.4 of [json-server](https://www.npmjs.com/package/json-server/v/0.17.4)
     - A current copy of the database file. You can get this by syncing your fork.
@@ -52,10 +52,10 @@ long-term support, also known as _LTS_, version of the Windows, MacOS, or Linux 
         do your tutorials. Create a new branch for each tutorial to prevent a mistake in one from
         affecting your work in another.
     - The [Postman desktop app](https://www.postman.com/downloads/).
-        Because you run the **To-Do Service** on your development system with an `http://localhost`
+        Because you run **PowerMeet** on your development system with an `http://localhost`
         host name, the web-version of Postman can't perform the exercises.
     - The [Postman desktop app](https://www.postman.com/downloads/).
-        Because you run the **To-Do Service** on your development system with an `http://localhost`
+        Because you run **PowerMeet** on your development system with an `http://localhost`
         host name, the web-version of Postman can't perform the exercises.
 
 <!-- vale Google.Acronyms = YES -->
@@ -64,18 +64,18 @@ long-term support, also known as _LTS_, version of the Windows, MacOS, or Linux 
 
 To test your development system:.
 
-1. Create and checkout a test branch of your fork of the To-Do-service repository.
+1. Create and checkout a test branch of your fork of the PowerMeet repository.
     Your `GitHub repository workspace` is the directory that contains your fork of
-    the `to-do-service-au25` repository.
+    the `powermeet` repository.
 
     ```shell
     cd <your GitHub repository workspace>
     ls
-    # (see the to-do-service directory in the list)
-    cd to-do-service-au25
+    # (see the powermeet directory in the list)
+    cd powermeet
     git checkout -b tutorial-test
     cd api
-    json-server -w to-do-db-source.json
+    json-server -w powermeetdb-source.json
     ```
 
     If you installed the software correctly, you should see
@@ -84,10 +84,10 @@ To test your development system:.
 2. Make a test call to the service.
 
     ```shell
-    curl http://localhost:3000/users
+    curl http://localhost:3000/lifters
     ```
 
-3. If the service is running correctly, you should see a list of users from the service,
+3. If the service is running correctly, you should see a list of lifters from the service,
     such as in this example.
 
     ```js
@@ -107,7 +107,7 @@ To test your development system:.
         ...
     ```
 
-You should see the list of users.
+You should see the list of lifters.
 If you receive an error in any step of the procedure, investigate, and correct the error before continuing.
 Some common situations that cause errors include:
 

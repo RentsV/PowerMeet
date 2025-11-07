@@ -25,19 +25,17 @@ color_scheme: light
 #   The title that you want to appear at the top of a topic
 #     and the description of your the documentation.
 #   !!! CHANGE THESE TO MATCH YOUR INSTALLATION OR ADAPTATION
-title: To-Do Service
+title: PowerMeet
 description: This is a mock API to simulate the REST interface of an
-  imaginary service. The To-Do service provides a cloud-hosted task
-  list through which subscribers can post tasks and receive
-  reminders of those tasks.
+  imaginary service. PowerMeet helps powerlifters find other lifters, powerlifting-friendly gyms, and local competitions.
 #   !!! CHANGE THIS TO MATCH THE URL OF YOUR PUBLISHED DOCS
-url: https://uwc2-apidoc.github.io/to-do-service-au25
-baseurl: "/to-do-service-au25"
+url: https://rentsv.github.io/PowerMeet
+baseurl: "/powermeet"
 #
 #   +++ REMOVE IF YOU DON'T WANT THE AUX LINKS AT THE TOP OF THE PAGE
 #       OR ADD MORE LINKS AS SUPPORTED BY THE THEME
 aux_links: 
-  To-Do Service repo: https://github.com/uwc2-apidoc/to-do-service-au25
+  PowerMeet repo: https://github.com/RentsV/PowerMeet
 #
 #   Configures how each topic URL is formatted
 #   +++ YOU CAN CHANGE THIS, BUT YOU PROBABLY DO NOT WANT TO
@@ -116,7 +114,7 @@ back_to_top_text: "Back to top"
 
 #
 #   !!! CHANGE THIS VALUE TO APPLY TO YOUR DOCUMENTATION
-footer_content: "Copyright &copy; 2025 University of Washington. Distributed by an <a href=\"https://raw.githubusercontent.com/uwc2-apidoc/to-do-service-au25/main/LICENSE\">MIT license.</a>"
+footer_content: "Copyright &copy; 2025 Reena Vaziri Distributed by an <a href=\"https://raw.githubusercontent.com/uwc2-apidoc/to-do-service-au25/main/LICENSE\">MIT license.</a>"
 #
 # - - - - - - - - - - - - - - - - 
 #

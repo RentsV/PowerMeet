@@ -39,7 +39,7 @@ PowerMeet helps powerlifters find other lifters, powerlifting-friendly gyms, and
 
 Learn how to do common tasks.
 
-First, do this tutorial to set up your development system for these tutorials.
+First, complete this tutorial to set up your development system for these tutorials.
 You only have to do this one time per development system.
 
 * [Before you start a tutorial](before-you-start-a-tutorial.md)
