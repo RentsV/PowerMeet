@@ -53,7 +53,7 @@ To add a new gym:
 2. Open the Postman app on your desktop.
 3. In the Postman app, create a new request with these values:
     * **METHOD**: POST
-    * **URL**: `{{base_url}}/gyms`
+    * **URL**: `{base_url}/gyms`
     * **Headers**:
         * `Content-Type: application/json`
     * **Request body**:
