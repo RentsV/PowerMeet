@@ -2,7 +2,7 @@
 # markdownlint-disable
 # vale  off
 layout: default
-parent: gym resource
+parent: The gym resource
 nav_order: 1
 # tags used by AI files
 description: DELETE the `gym` resource with the specified ID from the service
@@ -19,12 +19,12 @@ examples: []
 api_endpoints: 
     - DELETE /gyms/{id}
 version: "v1.0"
-last_updated: "2025-11-07"
+last_updated: "2025-11-11"
 # vale  on
 # markdownlint-enable
 ---
 
-# Delete a task by ID
+# Delete a gym by ID
 
 This action deletes a [`gym`](gym.md) specified by the `id` parameter of the `gym` resource.
 
@@ -46,7 +46,7 @@ This action deletes a [`gym`](gym.md) specified by the `id` parameter of the `gy
 You don't have to specify the header information and this request has no request body.
 
 This call also doesn't return anything, no matter if the call is successful or not.
-To verify that the deletion was successful, check the task list again.
+To verify that the deletion was successful, check the list of all gyms again.
 Another option is to run a GET call with this ´id´ to make sure that it doesn't exist anymore.
 
 ## Example

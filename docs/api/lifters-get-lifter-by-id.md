@@ -2,7 +2,7 @@
 # markdownlint-disable
 # vale  off
 layout: default
-parent: lifter resource
+parent: The lifter resource
 nav_order: 2
 # tags used by AI files
 description: GET the `lifter` resource with the specified ID from the service
@@ -19,7 +19,7 @@ examples: []
 api_endpoints: 
     - GET /lifters
 version: "v1.0"
-last_updated: "2025-11-07"
+last_updated: "2025-11-11"
 # vale  on
 # markdownlint-enable
 ---
@@ -41,13 +41,7 @@ Returns a [`lifter`](lifter.md) object specified by the `id` parameter, given th
 | -------------- | ------ | ------------ |
 | `id` | number | The record ID of the lifter to return |
 
-## Request headers
-
-None
-
-## Request body
-
-None
+This call doesn't need request headers or a request body.
 
 ## Return body
 

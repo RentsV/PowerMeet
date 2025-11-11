@@ -2,7 +2,7 @@
 # markdownlint-disable
 # vale  off
 layout: default
-parent: lifter resource
+parent: The lifter resource
 nav_order: 1
 # tags used by AI files
 description: GET all `lifter` resources from the service
@@ -19,7 +19,7 @@ examples: []
 api_endpoints: 
     - GET /lifters
 version: "v1.0"
-last_updated: "2025-11-07"
+last_updated: "2025-11-11"
 # vale  on
 # markdownlint-enable
 ---
@@ -35,17 +35,9 @@ Returns an array of [`lifter`](lifter.md) objects that contains all lifters regi
 {server_url}/lifters
 ```
 
-## Parameters
-
-None
-
-## Request headers
-
-None
-
-## Request body
-
-None
+This call doesn't have any parameters.
+It also doesn't need request headers or a request body.
+Running this call returns a list of all users.
 
 ## Return body
 
