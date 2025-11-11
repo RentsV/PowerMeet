@@ -54,9 +54,6 @@ long-term support, also known as _LTS_, version of the Windows, MacOS, or Linux 
     - The [Postman desktop app](https://www.postman.com/downloads/).
         Because you run **PowerMeet** on your development system with an `http://localhost`
         host name, the web-version of Postman can't perform the exercises.
-    - The [Postman desktop app](https://www.postman.com/downloads/).
-        Because you run **PowerMeet** on your development system with an `http://localhost`
-        host name, the web-version of Postman can't perform the exercises.
 
 <!-- vale Google.Acronyms = YES -->
 

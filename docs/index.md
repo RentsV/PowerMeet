@@ -33,7 +33,7 @@ PowerMeet helps powerlifters find other lifters, powerlifting-friendly gyms, and
 
 ## Quickstart
 
-[Add your first gym _(coming soon)_](#quickstart) to see how easy it is!
+[Add your first gym _(coming soon)_](#quickstart) to see how easy it is.
 
 ## Tutorials
 

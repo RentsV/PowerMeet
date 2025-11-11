@@ -2,7 +2,7 @@
 # markdownlint-disable
 # vale  off
 layout: default
-nav_order: 1
+nav_order: 2
 parent: Tutorials
 # tags used by AI files
 description: Add a `gym` resource to the service

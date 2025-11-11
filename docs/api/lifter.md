@@ -2,7 +2,7 @@
 # markdownlint-disable
 # vale  off
 layout: default
-nav_order: 5
+nav_order: 4
 has_children: true
 has_toc: false
 # tags used by AI files
@@ -25,7 +25,7 @@ last_updated: "2025-11-07"
 # markdownlint-enable
 ---
 
-# `lifter` resource
+# The `lifter` resource
 
 Base endpoint:
 

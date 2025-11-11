@@ -3,7 +3,7 @@
 # vale  off
 layout: default
 parent: Tutorials
-nav_order: 2
+nav_order: 1
 # tags used by AI files
 description: Add a `lifter` resource to the service
 tags:
