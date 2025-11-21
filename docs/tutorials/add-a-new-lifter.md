@@ -25,7 +25,7 @@ last_updated: "2025-11-21"
 # markdownlint-enable
 ---
 
-# Tutorial: Add a new lifter
+# Add a new lifter
 
 In this tutorial, you learn the operations to add a new lifter.
 

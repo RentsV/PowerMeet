@@ -3,7 +3,7 @@
 # vale  off
 layout: default
 parent: The gym resource
-nav_order: 1
+nav_order: 2
 # tags used by AI files
 description: DELETE the `gym` resource with the specified ID from the service
 tags:
@@ -24,9 +24,14 @@ last_updated: "2025-11-11"
 # markdownlint-enable
 ---
 
-# Delete a gym by ID
+# The /gyms/{id} endpoint
 
-This action deletes a [`gym`](gym.md) specified by the `id` parameter of the `gym` resource.
+A `/gyms/{id}` endpoint consists of the base endpoint and an object's ID.
+Running this endpoint in PowerShell returns a [`gym`](gym.md) object with this ID.
+If the specific ID doesn't exist in the system, the system returns a 404 error.
+
+You can read a full tutorial on getting information about a lifter in Postman [`here`](../tutorials/get-a-gym-by-id.md).
+Check out other tutorials to see what else you can do with this resource.
 
 ## URL
 
@@ -41,9 +46,11 @@ This action deletes a [`gym`](gym.md) specified by the `id` parameter of the `gy
 | -------------- | ------ | ------------ |
 | `id` | number | ID of the gym that you want to delete |
 
-## Request information
+This call doesn't need request headers or a request body.
 
-You don't have to specify the header information and this request has no request body.
+## Return body
+
+You don't need header information and this request has no request body.
 
 This call also doesn't return anything, no matter if the call is successful or not.
 To verify that the deletion was successful, check the list of all gyms again.
@@ -52,8 +59,16 @@ Another option is to run a GET call with this ´id´ to make sure that it doesn'
 ## Example
 
 ```js
-
-curl -X DELETE http://localhost:3000/gyms/5
+[
+    {
+        "lifterId": 2,
+        "name": "Foundry Strength and Conditioning",
+        "description": "Strongman and powerlifting gym \nwith open platform space and deadlift bars.",
+        "location": "Jersey City, NJ",
+        "rating": 4,
+        "id": 2
+    }
+]
 ```
 
 ## Return status
@@ -61,5 +76,5 @@ curl -X DELETE http://localhost:3000/gyms/5
 | Status value | Return status | Description |
 | ------------- | ----------- | ----------- |
 | 200 | Success | Requested data returned successfully |
-| 404 | Error | Specified user record not found |
+| 404 | Error | Specified gym record not found |
 |  ECONNREFUSED | N/A | Service is offline. Start the service and try again. |

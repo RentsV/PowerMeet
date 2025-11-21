@@ -30,7 +30,7 @@ A `/lifters/{id}` endpoint consists of the base endpoint and an object's ID.
 Running this endpoint in PowerShell returns a [`lifter`](lifter.md) object with this ID.
 If the specific ID doesn't exist in the system, the system returns a 404 error.
 
-You can read a full tutorial on receiving a lifter in Postman [`here`](../tutorials/get-a-lifter-by-id.md).
+You can read a full tutorial on getting information about a lifter in Postman [`here`](../tutorials/get-a-lifter-by-id.md).
 Check out other tutorials to see what else you can do with this resource.
 
 ## URL
