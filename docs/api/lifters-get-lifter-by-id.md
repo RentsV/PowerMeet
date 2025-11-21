@@ -19,14 +19,19 @@ examples: []
 api_endpoints: 
     - GET /lifters
 version: "v1.0"
-last_updated: "2025-11-11"
+last_updated: "2025-11-21"
 # vale  on
 # markdownlint-enable
 ---
 
-# Get a user by ID
+# The /lifters/{id} endpoint
 
-Returns a [`lifter`](lifter.md) object specified by the `id` parameter, given that it exists.
+A `/lifters/{id}` endpoint contains of the base endpoint and an object's ID.
+Running this endpoint in PowerShell returns a [`lifter`](lifter.md) object with this ID.
+If the specific ID doesn't exist in the system, the system returns a 404 error.
+
+You can read a full tutorial on receiving a lifter in Postman [`here`](../tutorials/get-a-lifter-by-id.md).
+Check out other tutorials to see what else you can do with this resource.
 
 ## URL
 

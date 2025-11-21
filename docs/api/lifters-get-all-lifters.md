@@ -24,9 +24,14 @@ last_updated: "2025-11-11"
 # markdownlint-enable
 ---
 
-# Get all users
+# The /lifters endpoint
 
-Returns an array of [`lifter`](lifter.md) objects that contains all lifters registered with the service.
+Running the base endpoint in PowerShell with no method parameter
+returns an array of all [`lifter`](lifter.md) objects.
+This contains information about all the lifters registered with the service.
+
+You can read a full tutorial on receiving this list in Postman [`here`](../tutorials/get-all-lifters.md).
+Check out other tutorials to see what else you can do with this resource.
 
 ## URL
 
@@ -36,7 +41,7 @@ Returns an array of [`lifter`](lifter.md) objects that contains all lifters regi
 ```
 
 This call doesn't have any parameters.
-It also doesn't need request headers or a request body.
+It also doesn't need request headers or a request body in PowerShell.
 Running this call returns a list of all users.
 
 ## Return body
@@ -44,15 +49,15 @@ Running this call returns a list of all users.
 ```js
 [
     {
-        "lastName": "Smith",
-        "firstName": "Ferdinand",
-        "email": "f.smith@example.com",
+        "lastName": "Johnson",
+        "firstName": "Tara",
+        "email": "tara.johnson@example.com",
         "id": 1
     },
     {
-        "lastName": "Jones",
-        "firstName": "Jillio",
-        "email": "jlo.jones@example.com",
+        "lastName": "Nguyen",
+        "firstName": "Chris",
+        "email": "chris.nguyen@example.com",
         "id": 2
     }
     ...
