@@ -53,8 +53,11 @@ To add a new lifter:
 3. In the Postman app, create a new request with these values:
     * **METHOD**: POST
     * **URL**: `{base_url}/lifters`
-    * **Headers**:
-        * `Content-Type: application/json`
+
+        If you are running it locally, the `{base_url}` is most likely `http://localhost:3000`.
+    * **Headers**: `Content-Type: application/json`
+
+        Postman inserts this part for you.
     * **Request body**:
         You can change the values of each property as you'd like.
 
@@ -94,8 +97,11 @@ If it's not, start it by using this command.
 3. In the Postman app, create a new request with these values:
     * **METHOD**: POST
     * **URL**: `{base_url}/gyms`
-    * **Headers**:
-        * `Content-Type: application/json`
+
+        If you are running it locally, the `{base_url}` is most likely `http://localhost:3000`.
+    * **Headers**: `Content-Type: application/json`
+
+        Postman inserts this part for you, don't sweat it.
     * **Request body**:
         You can change the values of each property as you'd like.
         The `lifterId` is the ID you created in the previous step.
