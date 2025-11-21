@@ -2,33 +2,32 @@
 # markdownlint-disable
 # vale  off
 layout: default
-nav_order: 4
 parent: Tutorials
+nav_order: 1
 # tags used by AI files
-description: Add a `gym` resource to the service
+description: Get a list of all `lifter` resources
 tags:
     - api
 categories: 
     - tutorial
 ai_relevance: high
 importance: 6
-prerequisites:
+prerequisites: 
     - /before-you-start-a-tutorial
     - /api/lifter
-    - /api/gym
 related_pages: []
 examples: []
-api_endpoints:
-    - POST /gyms/{id}
+api_endpoints: 
+    - GET /lifters
 version: "v1.0"
 last_updated: "2025-11-21"
 # vale  on
 # markdownlint-enable
 ---
 
-# Tutorial: Add a new gym
+# Tutorial: Get all lifters
 
-In this tutorial, you learn to add a new gym.
+In this tutorial, you learn to use the GET call to retrieve a list of all lifters.
 
 Expect this tutorial to take about 15 minutes to complete.
 
@@ -36,12 +35,11 @@ Expect this tutorial to take about 15 minutes to complete.
 
 Make sure you've completed the [Before you start a tutorial](../before-you-start-a-tutorial.md).
 
-## Add a new gym
+## Get a list of all lifters
 
-Adding a new gym to the service requires that you use the `POST` method.
-This allows you to store the details of the new [`gym`](../api/gym.md) resource in the service.
+Retrieving a list of all lifters requires you to use the `GET` method.
 
-To add a new gym:
+To get a list of all lifters:
 
 1. Make sure your local service is running, or start it by using this command, if it's not.
 
@@ -52,37 +50,32 @@ To add a new gym:
 
 2. Open the Postman app on your desktop.
 3. In the Postman app, create a new request with these values:
-    * **METHOD**: POST
-    * **URL**: `{base_url}/gyms`
+    * **METHOD**: GET
+    * **URL**: `{base_url}/lifters`
     * **Headers**:
         * `Content-Type: application/json`
     * **Request body**:
-        You can change the values of each property as you'd like.
-
-        ```js
-        {
-            "lifterId": 3,
-            "name": "My Favourite Gym",
-            "description": "Lacks all basic necessities, avoid.",
-            "location": "Newark, NJ",
-            "rating": 1
-        }
-        ```
+        This call doesn't need a request body.
 
 4. In the Postman app, choose **Send** to make the request.
 5. Watch for the response body, which should look something like this.
-6. Note that the names should be the same as you used in your **Request body**.
-7. The response should include the new user's ID.
 
     ```js
-    {
-        "lifterId": 3,
-        "name": "My Favourite Gym",
-        "description": "Lacks all basic necessities, avoid.",
-        "location": "Newark, NJ",
-        "rating": 1
-        "id": 5
-    }
+    [
+        {
+            "lastName": "Johnson",
+            "firstName": "Tara",
+            "email": "tara.johnson@example.com",
+            "id": 1
+        },
+        {
+            "lastName": "Nguyen",
+            "firstName": "Chris",
+            "email": "chris.nguyen@example.com",
+            "id": 2
+        },
+        ...
+    ]
     ```
 
 After doing this tutorial in Postman, you might like to repeat it in

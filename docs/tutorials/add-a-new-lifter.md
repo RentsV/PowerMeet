@@ -3,7 +3,7 @@
 # vale  off
 layout: default
 parent: Tutorials
-nav_order: 1
+nav_order: 3
 # tags used by AI files
 description: Add a `lifter` resource to the service
 tags:
@@ -18,9 +18,9 @@ prerequisites:
 related_pages: []
 examples: []
 api_endpoints: 
-    - POST /lifters
+    - POST /lifters/{id}
 version: "v1.0"
-last_updated: "2025-10-07"
+last_updated: "2025-11-21"
 # vale  on
 # markdownlint-enable
 ---
