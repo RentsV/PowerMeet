@@ -37,6 +37,7 @@ This API has two resources: lifters and gyms.
 You can query the system to see information about a specific lifter or a gym.
 You can also see the list of all lifters or all gyms, along with available information.
 This way, lifters know right away if a gym has the equipment they need.
+
 Heck, no one really cares about security here, so you can even edit or delete
 all the entries without verifying your identity.
 At least in your own cloned repo, you're the king, queen, and the court.
