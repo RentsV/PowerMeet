@@ -33,7 +33,7 @@ This action deletes a [`gym`](../api/gym.md) object specified by the `id` parame
 
 ## Before you start
 
-Make sure you've completed the [Before you start a tutorial](../before-you-start-a-tutorial.md).
+Make sure you've completed the instructions in [Before you start a tutorial](../before-you-start-a-tutorial.md).
 
 ## Delete a gym
 
