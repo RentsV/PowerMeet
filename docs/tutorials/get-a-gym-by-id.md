@@ -64,7 +64,7 @@ To retrieve information about a chosen gym:
     {
         "lifterId": 1,
         "name": "Iron Temple Barbell Club",
-        "description": "Specializes in powerlifting with combo racks, \nchalk-friendly policy, \nand calibrated plates.",
+        "description": "Powerlifting: combo racks, chalk-friendly policy, calibrated plates.",
         "location": "Newark, NJ",
         "rating": 5,
         "id": 1

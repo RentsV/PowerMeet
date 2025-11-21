@@ -30,7 +30,7 @@ A `/gyms/{id}` endpoint consists of the base endpoint and an object's ID.
 Running this endpoint in PowerShell returns a [`gym`](gym.md) object with this ID.
 If the specific ID doesn't exist in the system, the system returns a 404 error.
 
-You can read a full tutorial on getting information about a lifter in Postman [`here`](../tutorials/get-a-gym-by-id.md).
+You can read a full tutorial on getting information about a gym in Postman [`here`](../tutorials/get-a-gym-by-id.md).
 Check out other tutorials to see what else you can do with this resource.
 
 ## URL
@@ -44,13 +44,11 @@ Check out other tutorials to see what else you can do with this resource.
 
 | Parameter name | Type | Description |
 | -------------- | ------ | ------------ |
-| `id` | number | ID of the gym that you want to delete |
+| `id` | number | ID of the gym |
 
 This call doesn't need request headers or a request body.
 
 ## Return body
-
-You don't need header information and this request has no request body.
 
 This call also doesn't return anything, no matter if the call is successful or not.
 To verify that the deletion was successful, check the list of all gyms again.
@@ -63,7 +61,7 @@ Another option is to run a GET call with this ´id´ to make sure that it doesn'
     {
         "lifterId": 2,
         "name": "Foundry Strength and Conditioning",
-        "description": "Strongman and powerlifting gym \nwith open platform space and deadlift bars.",
+        "description": "Strongman and powerlifting gym with open platform space and deadlift bars.",
         "location": "Jersey City, NJ",
         "rating": 4,
         "id": 2

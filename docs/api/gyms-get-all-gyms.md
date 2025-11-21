@@ -30,7 +30,7 @@ Running the base endpoint in PowerShell with no method parameter
 returns an array of all [`gym`](gym.md) objects.
 This contains information about all the gyms registered with the service.
 
-You can read a full tutorial on receiving this list in Postman [`here`](../tutorials/get-all-gyms.md).
+You can read a full tutorial on retrieving this list in Postman [`here`](../tutorials/get-all-gyms.md).
 Check out other tutorials to see what else you can do with this resource.
 
 ## URL
@@ -49,17 +49,21 @@ Running this call returns a list of all gyms.
 ```js
 [
     {
-        "lastName": "Johnson",
-        "firstName": "Tara",
-        "email": "tara.johnson@example.com",
+        "lifterId": 1,
+        "name": "Iron Temple Barbell Club",
+        "description": "Powerlifting: combo racks, chalk-friendly policy, calibrated plates.",
+        "location": "Newark, NJ",
+        "rating": 5,
         "id": 1
-    },
+        },
     {
-        "lastName": "Nguyen",
-        "firstName": "Chris",
-        "email": "chris.nguyen@example.com",
+        "lifterId": 2,
+        "name": "Foundry Strength and Conditioning",
+        "description": "Strongman and powerlifting gym with open platform space and deadlift bars.",
+        "location": "Jersey City, NJ",
+        "rating": 4,
         "id": 2
-    }
+    },
     ...
 ]
 ```

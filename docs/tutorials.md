@@ -30,7 +30,9 @@ last_updated: "2025-11-07"
 These tutorials are available to help you start using the **PowerMeet API**.
 
 Be sure to review [Before you start a tutorial](before-you-start-a-tutorial.md)
-before you start your first tutorial.
+before you start trying out the tutorials.
 
+* [Get a list of all lifters](tutorials/get-all-lifters.md)
+* [Get a lifter by ID](tutorials/get-a-lifter-by-id.md)
 * [Add a new lifter](tutorials/add-a-new-lifter.md)
 * [Add a new gym](tutorials/add-a-new-gym.md)
