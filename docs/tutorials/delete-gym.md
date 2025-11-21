@@ -3,43 +3,43 @@
 # vale  off
 layout: default
 parent: Tutorials
-nav_order: 7
+nav_order: 10
 # tags used by AI files
-description: Get an instance of a `gym` resource by ID
+description: DELETE the `gym` resource with the specified ID from the service
 tags:
     - api
-categories: 
-    - tutorial
+categories:
+    - api-reference
 ai_relevance: high
-importance: 6
+importance: 7
 prerequisites: 
-    - /before-you-start-a-tutorial
     - /api/gym
 related_pages: []
 examples: []
 api_endpoints: 
-    - GET /gyms/{id}
+    - DELETE /gyms/{id}
 version: "v1.0"
 last_updated: "2025-11-21"
 # vale  on
 # markdownlint-enable
 ---
 
-# Get a gym by ID
+# Delete a gym by ID
 
-In this tutorial, you learn to use the GET call to retrieve information about a specific gym.
+In this tutorial, you learn to run a DELETE call.
+This action deletes a [`gym`](../api/gym.md) object specified by the `id` parameter of the `gym` resource.
 
-Expect this tutorial to take about 15 minutes to complete.
+**Note:** If you run this call with no ID, you delete all gyms in the database!!!
 
 ## Before you start
 
 Make sure you've completed the instructions in [Before you start a tutorial](../before-you-start-a-tutorial.md).
 
-## Retrieve a gym by ID
+## Delete a gym
 
-Retrieving this information requires you to use the `GET` method.
+You must use the `DELETE` method to delete a gym.
 
-To retrieve information about a chosen gym:
+To do so:
 
 1. Make sure your local service is running, or start it by using this command, if it's not.
 
@@ -50,7 +50,7 @@ To retrieve information about a chosen gym:
 
 2. Open the Postman app on your desktop.
 3. In the Postman app, create a new request with these values:
-    * **METHOD**: GET
+    * **METHOD**: DELETE
     * **URL**: `{base_url}/gyms/{id}` where {id} is an ID number.
     * **Headers**:
         * `Content-Type: application/json`
@@ -58,18 +58,11 @@ To retrieve information about a chosen gym:
         This call doesn't need a request body.
 
 4. In the Postman app, choose **Send** to make the request.
-5. Watch for the response body. If your URL ended with 1, the response should look something like this.
-
-    ```js
-    {
-        "lifterId": 1,
-        "name": "Iron Temple Barbell Club",
-        "description": "Powerlifting: combo racks, chalk-friendly policy, calibrated plates.",
-        "location": "Newark, NJ",
-        "rating": 5,
-        "id": 1
-    }
-    ```
+5. This call doesn't return anything, no matter if the call is successful or not.
+To verify whether the deletion was successful, check the list of all gyms again.
+Another option is to run a GET call with this ID to make sure that it doesn't exist anymore.
+If in doubt, check out the relevant tutorials for [checking the list of all gyms](/get-all-gyms.md)
+or [retrieving information about a specific gym](/get-a-gym-by-id.md).
 
 After doing this tutorial in Postman, you might like to repeat it in
 your favorite programming language. To do this, adapt the values from

@@ -52,15 +52,13 @@ before you start trying out these operations.
 * [Get a list of all lifters](tutorials/get-all-lifters.md)
 * [Get a lifter by ID](tutorials/get-a-lifter-by-id.md)
 * [Add a new lifter](tutorials/add-a-new-lifter.md)
-* [Replace a lifter]
-* [Edit a lifter]
-* [Delete a lifter]
+* [Edit a lifter entry](tutorials/edit-a-lifter.md)
+* [Delete a lifter](tutorials/delete-lifter.md)
 
 ## The `gym` resource
 
 * [Get a list of all gyms](tutorials/get-all-gyms.md)
 * [Get a gym by ID](tutorials/get-a-gym-by-id.md)
 * [Add a new gym](tutorials/add-a-new-gym.md)
-* [Replace a gym]
-* [Edit a gym]
-* [Delete a gym]
+* [Edit a gym](tutorials/edit-a-gym.md)
+* [Delete a gym](tutorials/delete-gym.md)
