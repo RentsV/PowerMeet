@@ -25,7 +25,7 @@ last_updated: "2025-11-21"
 # markdownlint-enable
 ---
 
-# Tutorial: Get all lifters
+# Get all lifters
 
 In this tutorial, you learn to use the GET call to retrieve a list of all lifters.
 

@@ -25,7 +25,7 @@ last_updated: "2025-11-21"
 # markdownlint-enable
 ---
 
-# Tutorial: Add a new lifter
+# Add a new lifter
 
 In this tutorial, you learn the operations to add a new lifter.
 
@@ -35,7 +35,7 @@ Expect this tutorial to take about 15 minutes to complete.
 
 Make sure you've completed the [Before you start a tutorial](../before-you-start-a-tutorial.md).
 
-## Add a new lifter
+## Adding a new lifter
 
 Adding a new lifter requires you to use the `POST` method.
 This allows you to store the details of the new [`lifter`](../api/lifter.md) resource in the service.

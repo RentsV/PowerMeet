@@ -63,7 +63,3 @@ Sample `gym` resource
 | `location` | string | Location of the gym |
 | `rating` | number | Rating of the gym from 1 to 5 |
 | `id` | number | The gym's unique record ID |
-
-## Operations
-
-* [Delete a gym](gyms-delete-gym-by-id.md)
