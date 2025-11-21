@@ -26,6 +26,8 @@ last_updated: "2025-10-07"
 
 # PowerMeet API
 
+![PowerMeet image](/powermeet.png)
+
 This is a mock API to simulate the REST interface of an
 imaginary service.
 

@@ -27,6 +27,8 @@ last_updated: "2025-11-07"
 
 # Tutorials
 
+![Tutorials image](/pmtutorials.png)
+
 These tutorials are available to help you start using the **PowerMeet API**.
 
 Be sure to review [Before you start a tutorial](before-you-start-a-tutorial.md)
