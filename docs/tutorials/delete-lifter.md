@@ -3,9 +3,9 @@
 # vale  off
 layout: default
 parent: Tutorials
-nav_order: 7
+nav_order: 5
 # tags used by AI files
-description: DELETE the `gym` resource with the specified ID from the service
+description: DELETE the `lifter` resource with the specified ID from the service
 tags:
     - api
 categories:
@@ -13,31 +13,32 @@ categories:
 ai_relevance: high
 importance: 7
 prerequisites: 
-    - /api/gym
+    - /api/lifter
 related_pages: []
 examples: []
 api_endpoints: 
-    - DELETE /gyms/{id}
+    - DELETE /lifters/{id}
 version: "v1.0"
 last_updated: "2025-11-21"
 # vale  on
 # markdownlint-enable
 ---
 
-# Delete a gym by ID
+# Delete a lifter by ID
 
 In this tutorial, you learn to run a DELETE call.
-This action deletes a [`gym`](../api/gym.md) object specified by the `id` parameter of the `gym` resource.
+This action deletes a [`lifter`](../api/gym.md) object
+specified by the `id` parameter of the `lifter` resource.
 
-**Note:** If you run this call with no ID, you delete all gyms in the database!!!
+**Note:** If you run this call with no ID, you delete all lifters in the database!!!
 
 ## Before you start
 
 Make sure you've completed the instructions in [Before you start a tutorial](../before-you-start-a-tutorial.md).
 
-## Delete a gym
+## Delete a lifter
 
-You must use the `DELETE` method to delete a gym.
+You must use the `DELETE` method to delete a lifter.
 
 To do so:
 
@@ -58,11 +59,11 @@ To do so:
         This call doesn't need a request body.
 
 4. In the Postman app, choose **Send** to make the request.
-5. This call also doesn't return anything, no matter if the call is successful or not.
+5. This call doesn't return anything, no matter if the call is successful or not.
 To verify whether the deletion was successful, check the list of all gyms again.
 Another option is to run a GET call with this ID to make sure that it doesn't exist anymore.
-If in doubt, check out the relevant tutorials for [checking the list of all gyms](/get-all-gyms.md)
-or [retrieving information about a specific gym](/get-a-gym-by-id.md).
+If in doubt, check out the relevant tutorials for [checking the list of all lifters](/get-all-lifters.md)
+or [retrieving information about a specific lifter](/get-a-lifter-by-id.md).
 
 After doing this tutorial in Postman, you might like to repeat it in
 your favorite programming language. To do this, adapt the values from
