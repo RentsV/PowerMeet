@@ -1,3 +1,4 @@
 # PowerMeet
 
-PowerMeet helps powerlifters find other lifters, powerlifting-friendly gyms, and local competitions.
+PowerMeet helps powerlifters find other lifters and local gyms.
+Find out more on the [homepage](https://rentsv.github.io/PowerMeet/).

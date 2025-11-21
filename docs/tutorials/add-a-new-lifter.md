@@ -68,8 +68,8 @@ To add a new lifter:
 
 4. In the Postman app, choose **Send** to make the request.
 5. Watch for the response body, which should look something like this.
-6. Note that the names should be the same as you used in your **Request body**.
-7. The response should include the new user's ID.
+Note that the names should be the same as you used in your **Request body**.
+The response should include the new user's ID.
 
     ```js
     {
