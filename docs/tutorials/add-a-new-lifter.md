@@ -33,7 +33,7 @@ Expect this tutorial to take about 15 minutes to complete.
 
 ## Before you start
 
-Make sure you've completed the [Before you start a tutorial](../before-you-start-a-tutorial.md).
+Make sure you've completed the instructions in [Before you start a tutorial](../before-you-start-a-tutorial.md).
 
 ## Adding a new lifter
 
