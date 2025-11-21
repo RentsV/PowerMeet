@@ -26,7 +26,7 @@ last_updated: "2025-11-21"
 
 # The /lifters/{id} endpoint
 
-A `/lifters/{id}` endpoint contains of the base endpoint and an object's ID.
+A `/lifters/{id}` endpoint consists of the base endpoint and an object's ID.
 Running this endpoint in PowerShell returns a [`lifter`](lifter.md) object with this ID.
 If the specific ID doesn't exist in the system, the system returns a 404 error.
 
