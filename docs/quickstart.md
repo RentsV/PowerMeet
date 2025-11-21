@@ -27,15 +27,15 @@ last_updated: "2025-11-21"
 
 # Quickstart
 
-![Tutorials image](/pmtutorials.png)
+![Quickstart image](quickstartpic.jpeg)
 
 This quickstart walks you through creating yourself a new lifter
-and then adding a gym to this lifter.
-If you already have a lifter account, you can move straigth to [adding a gym](#add-a-gym) to an existing lifter.
+and then adding a gym to their account.
+If you already have a lifter, you can move directly to [adding a gym](#add-a-gym) to an existing lifter.
 
 ## Before you start
 
-Using this API requires your own fork of its repo, so
+Using this API requires your own fork of its repo, among other things, so
 review [Before you start a tutorial](before-you-start-a-tutorial.md) before getting started.
 
 ## Add a lifter
@@ -60,9 +60,9 @@ To add a new lifter:
 
         ```js
         {
-            "lastName": "Jones",
-            "firstName": "Jenny",
-            "email": "jen.jones@example.com"
+            "lastName": "Your Last Name",
+            "firstName": "Your First Name",
+            "email": "firstname.lastname@example.com"
         }
         ```
 
@@ -73,16 +73,16 @@ The response should include the new user's ID.
 
     ```js
     {
-        "lastName": "Jones",
-        "firstName": "Jenny",
-        "email": "jen.jones@example.com",
+        "lastName": "Your Last Name",
+        "firstName": "Your First Name",
+        "email": "firstname.lastname@example.com",
         "id": 5
     }
     ```
 
 ## Add a gym
 
-1. If you start from here, make sure your local service is running.
+1. Make sure your local service is running.
 If it's not, start it by using this command.
 
     ```shell

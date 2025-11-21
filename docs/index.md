@@ -13,7 +13,8 @@ ai_relevance: high
 importance: 9
 prerequisites: []
 related_pages: 
-    - /before-you-start-a-tutorial 
+    - /before-you-start-a-tutorial
+    - /quickstart 
     - /apy/gym
     - /api/lifter
 examples: []
@@ -42,7 +43,8 @@ At least in your own cloned repo, you're the king, queen, and the court.
 
 ## Quickstart
 
-[Add your first gym](#quickstart) to see how easy it is.
+[Add your first lifter and their gym](quickstart.md).
+It's like a piece of cake during your bulking phase.
 
 ## Tutorials
 
