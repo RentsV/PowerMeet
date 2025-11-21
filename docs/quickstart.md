@@ -29,7 +29,7 @@ last_updated: "2025-11-21"
 
 ![Quickstart image](quickstartpic.jpeg)
 
-This quickstart walks you through creating yourself a new lifter
+This quickstart ~~walks~~ runs you through creating yourself a new lifter
 and then adding a gym to their account.
 If you already have a lifter, you can move directly to [adding a gym](#add-a-gym) to an existing lifter.
 
