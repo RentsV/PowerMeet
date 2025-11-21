@@ -50,12 +50,6 @@ This call doesn't need request headers or a request body.
 
 ## Return body
 
-This call also doesn't return anything, no matter if the call is successful or not.
-To verify that the deletion was successful, check the list of all gyms again.
-Another option is to run a GET call with this ´id´ to make sure that it doesn't exist anymore.
-
-## Example
-
 ```js
 [
     {

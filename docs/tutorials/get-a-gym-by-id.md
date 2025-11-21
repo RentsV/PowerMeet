@@ -3,7 +3,7 @@
 # vale  off
 layout: default
 parent: Tutorials
-nav_order: 6
+nav_order: 5
 # tags used by AI files
 description: Get an instance of a `gym` resource by ID
 tags:

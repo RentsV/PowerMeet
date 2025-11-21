@@ -27,8 +27,8 @@ last_updated: "2025-11-21"
 # The /gyms endpoint
 
 Running the base endpoint in PowerShell with no method parameter
-returns an array of all [`gym`](gym.md) objects.
-This contains information about all the gyms registered with the service.
+returns an list of all [`gym`](gym.md) objects.
+It contains information about all the gyms registered with the service.
 
 You can read a full tutorial on retrieving this list in Postman [`here`](../tutorials/get-all-gyms.md).
 Check out other tutorials to see what else you can do with this resource.

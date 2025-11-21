@@ -27,8 +27,8 @@ last_updated: "2025-11-11"
 # The /lifters endpoint
 
 Running the base endpoint in PowerShell with no method parameter
-returns an array of all [`lifter`](lifter.md) objects.
-This contains information about all the lifters registered with the service.
+returns a list of all [`lifter`](lifter.md) objects.
+It contains information about all the lifters registered with the service.
 
 You can read a full tutorial on receiving this list in Postman [`here`](../tutorials/get-all-lifters.md).
 Check out other tutorials to see what else you can do with this resource.

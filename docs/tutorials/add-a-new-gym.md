@@ -2,7 +2,7 @@
 # markdownlint-disable
 # vale  off
 layout: default
-nav_order: 4
+nav_order: 6
 parent: Tutorials
 # tags used by AI files
 description: Add a `gym` resource to the service
@@ -36,7 +36,7 @@ Expect this tutorial to take about 15 minutes to complete.
 
 Make sure you've completed the [Before you start a tutorial](../before-you-start-a-tutorial.md).
 
-## Add a new gym
+## Adding a new gym
 
 Adding a new gym to the service requires that you use the `POST` method.
 This allows you to store the details of the new [`gym`](../api/gym.md) resource in the service.
@@ -72,7 +72,7 @@ To add a new gym:
 4. In the Postman app, choose **Send** to make the request.
 5. Watch for the response body, which should look something like this.
 6. Note that the names should be the same as you used in your **Request body**.
-7. The response should include the new user's ID.
+7. The response should include the new gym's ID.
 
     ```js
     {
