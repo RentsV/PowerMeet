@@ -32,7 +32,7 @@ This action deletes a [`lifter`](lifter.md) specified by the `id` parameter of t
 
 ```shell
 
-{server_url}/gyms/{id}
+{server_url}/lifters/{id}
 ```
 
 ## Parameters
@@ -47,7 +47,7 @@ You don't have to specify the header information and this request has no request
 
 This call also doesn't return anything, no matter if the call is successful or not.
 To verify that the deletion was successful, check the task list again.
-Another option is to run a GET call with this ´id´ to make sure that it doesn't exist anymore.
+Another option is to run a GET call with this `id` to make sure that it doesn't exist anymore.
 
 ## Example
 
