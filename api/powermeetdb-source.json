@@ -7,12 +7,6 @@
       "id": 1
     },
     {
-      "lastName": "Nguyen",
-      "firstName": "Chris",
-      "email": "chris.nguyen@example.com",
-      "id": 2
-    },
-    {
       "lastName": "Miller",
       "firstName": "Devon",
       "email": "devon.miller@example.com",
@@ -33,14 +27,6 @@
       "location": "Newark, NJ",
       "rating": 5,
       "id": 1
-    },
-    {
-      "lifterId": 2,
-      "name": "Foundry Strength and Conditioning",
-      "description": "Strongman and powerlifting gym with open platform space and deadlift bars.",
-      "location": "Jersey City, NJ",
-      "rating": 4,
-      "id": 2
     },
     {
       "lifterId": 3,

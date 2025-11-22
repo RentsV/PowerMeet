@@ -59,9 +59,12 @@ To do so:
         This call doesn't need a request body.
 
 4. In the Postman app, choose **Send** to make the request.
-5. This call doesn't return anything, no matter if the call is successful or not.
-To verify whether the deletion was successful, check the list of all gyms again.
-Another option is to run a GET call with this ID to make sure that it doesn't exist anymore.
+5. This call doesn't return any text, no matter if the call is successful or not.
+The only indicator of your success or failure is the little green `200 OK`
+or red `404 Not Found` in Postman.
+It should be above the empty response body, slightly to the right.
+If you can't see it, or if you like double-checking,
+you can run a GET call to make sure that this object doesn't exist anymore.
 If in doubt, check out the relevant tutorials for [checking the list of all lifters](/get-all-lifters.md)
 or [retrieving information about a specific lifter](/get-a-lifter-by-id.md).
 
@@ -69,3 +72,6 @@ After doing this tutorial in Postman, you might like to repeat it in
 your favorite programming language. To do this, adapt the values from
 the tutorial to the properties and arguments that the language uses to
 make REST API calls.
+
+If you would like to learn how to do this in a shell,
+read more about the [DELETE](/api/lifters-delete-lifter-by-id.md) operation for this endpoint.
