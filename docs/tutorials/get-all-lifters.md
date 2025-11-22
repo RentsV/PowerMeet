@@ -84,4 +84,4 @@ the tutorial to the properties and arguments that the language uses to
 make REST API calls.
 
 If you would like to learn how to do this in a shell,
-read more about the [GET](/api/lifters-get-all-lifters.md) operation for this endpoint.
+read more about the [GET](../api/lifters-get-all-lifters.md) operation for this endpoint.

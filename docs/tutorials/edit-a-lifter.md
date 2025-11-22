@@ -165,5 +165,5 @@ the tutorial to the properties and arguments that the language uses to
 make REST API calls.
 
 If you would like to learn how to do this in a shell,
-read more about the [PATCH](/api/lifters-patch-lifter.md) and [PUT](/api/lifters-put-lifter.md)
+read more about the [PATCH](../api/lifters-patch-lifter.md) and [PUT](../api/lifters-put-lifter.md)
 operations for this endpoint.
