@@ -93,7 +93,7 @@ If it's not, start it by using this command.
     json-server -w powermeetdb-source.json
     ```
 
-2. Open the Postman app on your desktop.
+2. If it's not already open, open the Postman app on your desktop.
 3. In the Postman app, create a new request with these values:
     * **METHOD**: POST
     * **URL**: `{base_url}/gyms`
@@ -104,7 +104,8 @@ If it's not, start it by using this command.
         Postman inserts this part for you, don't sweat it.
     * **Request body**:
         You can change the values of each property as you'd like.
-        The `lifterId` is the ID you created in the previous step.
+        The `lifterId` is the ID of your lifter.
+        For example, the one you created in the previous step.
 
         ```js
         {
