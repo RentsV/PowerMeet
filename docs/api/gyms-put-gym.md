@@ -60,7 +60,7 @@ so the system keeps this parameter unless you give it a new one.
 
 | Parameter | Example value | Obligatory |
 | ------------- | ----------- | ----------- |
-| `lifterId` | 1 | Yes |
+| `lifterId` | 1 | No |
 |  `name` | `Iron Temple Barbell Club` | No |
 | `description` | `Pending` | No |
 |  `location` | `Newark, NJ` | No |
@@ -106,5 +106,5 @@ This request returns the new object information.
 | Status value | Return status | Description |
 | ------------- | ----------- | ----------- |
 | 200 | Success | Requested data changed successfully |
-| 404 | Error | Specified user record not found |
+| 404 | Error | Specified record not found |
 |  ECONNREFUSED | N/A | Service is offline. Start the service and try again. |

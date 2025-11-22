@@ -96,4 +96,5 @@ Backslashes make the code more easily readable.
 | Status value | Return status | Description |
 | ------------- | ----------- | ----------- |
 | 200 | Success | Requested data added successfully |
+| 404 | Error | No lifter record found |
 |  ECONNREFUSED | N/A | Service is offline. Start the service and try again. |
