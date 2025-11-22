@@ -24,7 +24,7 @@ last_updated: "2025-11-22"
 # markdownlint-enable
 ---
 
-# PUT /gym{id}
+# `PUT /gym{id}`
 
 This action replaces a [`gym`](gym.md) object specified by the `id` parameter of the `gym` resource.
 If you only specify one field, the system saves other fields as empty.
@@ -39,30 +39,67 @@ the [PATCH operation](gyms-patch-gym.md) might be a better choice.
 {server_url}/gyms/{id}
 ```
 
-## Parameters
+## URL parameters
 
 | Parameter name | Type | Description |
 | -------------- | ------ | ------------ |
 | `id` | number | ID of the `gym` object that you want to change |
 
-## Request information
+## Request headers
 
-You don't have to specify the header information.
+This call uses `Content-Type: application/json` for the header.
 
-In the request body, write out all the fields.
-As this operation replaces the whole object,
-the system saves the fields you don't mention as empty.
+## Request body
+
+Take a look at the parameters for the request body in the following table.
+If you leave any parameters out,
+the system creates the entry without it.
+The only exception is the ID parameter.
+It's already present in URL,
+so the system keeps this parameter unless you give it a new one.
+
+| Parameter | Example value | Obligatory |
+| ------------- | ----------- | ----------- |
+| `lifterId` | 1 | Yes |
+|  `name` | `Iron Temple Barbell Club` | No |
+| `description` | `Pending` | No |
+|  `location` | `Newark, NJ` | No |
+|  `rating` | 5 | No |
+|  `id` | 1 | No |
 
 ## Example
 
 ```js
 
-curl -X PUT http://localhost:3000/gyms/5
+curl -X PUT "http://localhost:3000/gyms/1" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "lifterId": 1,
+    "name": "Iron Temple Barbell Club",
+    "description": "Pending.",
+    "location": "Newark, NJ",
+    "rating": 5,
+    "id": 1
+    }'
 ```
+
+Here, `-H` marks the header and `-d` marks the request body.
+Backslashes make the code more easily readable.
 
 ## Return body
 
 This request returns the new object information.
+
+```js
+{
+    "lifterId": 1,
+    "name": "Iron Temple Barbell Club",
+    "description": "Pending.",
+    "location": "Newark, NJ",
+    "rating": 5,
+    "id": 1
+}
+```
 
 ## Return status
 

@@ -24,7 +24,7 @@ last_updated: "2025-11-22"
 # markdownlint-enable
 ---
 
-# PATCH /gym{id}
+# `PATCH /gym{id}`
 
 This action changes a [`gym`](gym.md) object specified by the `id` parameter of the `gym` resource.
 
@@ -35,29 +35,63 @@ This action changes a [`gym`](gym.md) object specified by the `id` parameter of 
 {server_url}/gyms/{id}
 ```
 
-## Parameters
+## URL parameters
 
 | Parameter name | Type | Description |
 | -------------- | ------ | ------------ |
 | `id` | number | ID of the gym that you want to change |
 
-## Request information
+## Request headers
 
-You don't have to specify the header information.
+This call uses `Content-Type: application/json` for the header.
 
-In the request body, only mention the fields you want to change.
-Other fields stay the same.
+## Request body
+
+Take a look at the parameters for the request body in the following table.
+If you leave any parameters out,
+the system won't change them.
+
+The only obligatory parameter is `lifterID`,
+the call won't go through without it.
+
+| Parameter | Example value | Obligatory |
+| ------------- | ----------- | ----------- |
+| `lifterId` | 1 | Yes |
+|  `name` | `Iron Temple Barbell Club` | No |
+| `description` | `Pending` | No |
+|  `location` | `Newark, NJ` | No |
+|  `rating` | 5 | No |
+|  `id` | 1 | No |
 
 ## Example
 
 ```js
 
-curl -X PATCH http://localhost:3000/gyms/5
+curl -X PATCH "http://localhost:3000/gyms/1" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "rating": 4,
+    "description": "Slightly less chalk-friendly now."
+    }'
 ```
+
+Here, `-H` marks the header and `-d` marks the request body.
+Backslashes make the code more easily readable.
 
 ## Return body
 
 This request returns the whole object information with both changed and unchanged fields.
+
+```js
+{
+    "lifterId": 1,
+    "name": "Iron Temple Barbell Club",
+    "description": "Slightly less chalk-friendly now.",
+    "location": "Newark, NJ",
+    "rating": 4,
+    "id": 1
+}
+```
 
 ## Return status
 

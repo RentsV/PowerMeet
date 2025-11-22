@@ -39,30 +39,61 @@ the [PATCH operation](lifters-patch-lifter.md) might be a better choice.
 {server_url}/lifters/{id}
 ```
 
-## Parameters
+## URL parameters
 
 | Parameter name | Type | Description |
 | -------------- | ------ | ------------ |
 | `id` | number | ID of the `lifter` object that you want to change |
 
-## Request information
+## Request headers
 
-You don't have to specify the header information.
+This call uses `Content-Type: application/json` for the header.
 
-In the request body, write out all the fields.
-As this operation replaces the whole object,
-the system saves the fields you don't mention as empty.
+## Request body
+
+Take a look at the parameters for the request body in the following table.
+If you leave any parameters out,
+the system creates the entry without it.
+The only exception is the ID parameter.
+It's already present in URL,
+so the system keeps this parameter unless you give it a new one.
+
+| Parameter | Example value | Obligatory |
+| ------------- | ----------- | ----------- |
+| `lastName` | `Johnson` | No |
+|  `firstName` | `Tara` | No |
+| `email` | `tara24.johnson@example.com` | No |
+|  `id` | 1 | No |
 
 ## Example
 
 ```js
 
-curl -X PUT http://localhost:3000/lifters/5
+curl -X PUT "http://localhost:3000/lifters/1" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "lastName": "Johnson",
+    "firstName": "Tara",
+    "email": "tara24.johnson@example.com",
+    "id": 1
+    }'
 ```
+
+Here, `-H` marks the header and `-d` marks the request body.
+Backslashes make the code more easily readable.
 
 ## Return body
 
 This request returns the new object information.
+
+```js
+{
+    "lastName": "Johnson",
+    "firstName": "Tara",
+    "email": "tara24.johnson@example.com",
+    "id": 1
+}
+```
 
 ## Return status
 

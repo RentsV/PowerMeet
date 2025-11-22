@@ -24,7 +24,7 @@ last_updated: "2025-11-22"
 # markdownlint-enable
 ---
 
-# DELETE /gym{id}
+# `DELETE /gym{id}`
 
 This action deletes a [`gym`](gym.md) specified by the `id` parameter of the `gym` resource.
 
@@ -53,7 +53,7 @@ Another option is to run a GET call with this ´id´ to make sure that it doesn'
 
 ```js
 
-curl -X DELETE http://localhost:3000/gyms/5
+curl -X DELETE "http://localhost:3000/gyms/5"
 ```
 
 ## Return status
