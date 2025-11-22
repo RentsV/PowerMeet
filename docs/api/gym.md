@@ -69,7 +69,7 @@ Sample `gym` resource
 
 * [GET /gyms](gyms-get-all-gyms.md)
 * [GET /gyms{id}](gyms-get-gym-by-id.md)
-* [POST /gyms]
+* [POST /gyms](gyms-post-gym.md)
 * [PUT /gyms{id}]
 * [PATCH /gyms{id}]
 * [DELETE /gyms{id}](gyms-delete-gym-by-id.md)

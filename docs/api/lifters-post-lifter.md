@@ -2,10 +2,10 @@
 # markdownlint-disable
 # vale  off
 layout: default
-parent: The gym resource
-nav_order: 4
+parent: The lifter resource
+nav_order: 3
 # tags used by AI files
-description: POST a new `gym` resource
+description: POST a new `lifter` resource
 tags:
     - api
 categories:
@@ -13,42 +13,41 @@ categories:
 ai_relevance: high
 importance: 7
 prerequisites:
-    - /api/gym
+    - /api/lifter
 related_pages: []
 examples: []
 api_endpoints: 
-    - POST /gyms
+    - POST /lifters
 version: "v1.0"
-last_updated: "2025-11-21"
+last_updated: "2025-11-22"
 # vale  on
 # markdownlint-enable
 ---
 
-# POST /gyms
+# POST /lifters
 
-Running the base endpoint in PowerShell with a PUT method adds a new [`gym`](gym.md) object.
+Running the base endpoint in PowerShell with a PUT method adds a new [`lifter`](lifter.md) object.
 
-You can read a full tutorial on adding a new gym in Postman [`here`](../tutorials/add-a-new-gym.md).
-Check out other tutorials to see what else you can do with this resource.
+You can read a full tutorial on adding a new lifter in Postman [`here`](../tutorials/add-a-new-lifter.md).
 
 ## URL
 
 ```shell
 
-{server_url}/gyms
+{server_url}/lifters
 ```
 
 ## Request information
 
 This call doesn't have any parameters.
 You need to specify the fields in the request body,
-otherwise it will create a gym with only an ID.
+otherwise it creates a `lifter` object with only an ID.
 
 ## Example
 
 ```js
 
-curl -X POST http://localhost:3000/gyms/5
+curl -X POST http://localhost:3000/lifters
 ```
 
 
@@ -80,5 +79,5 @@ curl -X POST http://localhost:3000/gyms/5
 
 | Status value | Return status | Description |
 | ------------- | ----------- | ----------- |
-| 200 | Success | Requested data returned successfully |
+| 200 | Success | Requested data added successfully |
 |  ECONNREFUSED | N/A | Service is offline. Start the service and try again. |
