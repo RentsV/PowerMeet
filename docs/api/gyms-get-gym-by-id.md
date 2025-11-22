@@ -51,16 +51,15 @@ This call doesn't need request headers or a request body.
 ## Return body
 
 ```js
-[
-    {
-        "lifterId": 2,
-        "name": "Foundry Strength and Conditioning",
-        "description": "Strongman and powerlifting gym with open platform space and deadlift bars.",
-        "location": "Jersey City, NJ",
-        "rating": 4,
-        "id": 2
-    }
-]
+{
+    "lifterId": 2,
+    "name": "Foundry Strength and Conditioning",
+    "description": "Strongman and powerlifting gym with open platform space and deadlift bars.",
+    "location": "Jersey City, NJ",
+    "rating": 4,
+    "id": 2
+}
+
 ```
 
 ## Return status
