@@ -177,5 +177,5 @@ the tutorial to the properties and arguments that the language uses to
 make REST API calls.
 
 If you would like to learn how to do this in a shell,
-read more about the [PATCH](/api/gyms-patch-gym.md) and [PUT](/api/gyms-put-gym.md)
+read more about the [PATCH](../api/gyms-patch-gym.md) and [PUT](../api/gyms-put-gym.md)
 operations for this endpoint.
