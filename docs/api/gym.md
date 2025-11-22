@@ -19,8 +19,9 @@ related_pages:
 examples: []
 api_endpoints:
     - /gyms
+    - /gyms{id}
 version: "v1.0"
-last_updated: "2025-11-07"
+last_updated: "2025-11-22"
 # vale  on
 # markdownlint-enable
 ---
@@ -68,7 +69,7 @@ Sample `gym` resource
 
 * [GET /gyms](gyms-get-all-gyms.md)
 * [GET /gyms{id}](gyms-get-gym-by-id.md)
-* [POST /gyms]
+* [POST /gyms](gyms-post-gym.md)
 * [PUT /gyms{id}]
 * [PATCH /gyms{id}]
-* [DELETE /gyms{id}]
+* [DELETE /gyms{id}](gyms-delete-gym-by-id.md)

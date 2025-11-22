@@ -19,8 +19,9 @@ related_pages:
 examples: []
 api_endpoints: 
     - /lifters
+    - /lifters{id}
 version: "v1.0"
-last_updated: "2025-11-07"
+last_updated: "2025-11-22"
 # vale  on
 # markdownlint-enable
 ---
@@ -67,7 +68,7 @@ Sample `lifter` resource
 
 * [GET /lifters](lifters-get-all-lifters.md)
 * [GET /lifters{id}](lifters-get-lifter-by-id.md)
-* [POST /lifters]
-* [PUT /lifters{id}]
-* [PATCH /lifters{id}]
-* [DELETE /lifters{id}]
+* [POST /lifters](lifters-post-lifter.md)
+* [PATCH /lifters{id}](lifters-patch-lifter.md)
+* [PUT /lifters{id}](lifters-put-lifter.md)
+* [DELETE /lifters{id}](lifters-delete-lifter-by-id.md)

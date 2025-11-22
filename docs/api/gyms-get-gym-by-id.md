@@ -5,7 +5,7 @@ layout: default
 parent: The gym resource
 nav_order: 2
 # tags used by AI files
-description: DELETE the `gym` resource with the specified ID from the service
+description: GET the `gym` resource with the specified ID from the service
 tags:
     - api
 categories:
@@ -17,9 +17,9 @@ prerequisites:
 related_pages: []
 examples: []
 api_endpoints: 
-    - DELETE /gyms/{id}
+    - GET /gyms/{id}
 version: "v1.0"
-last_updated: "2025-11-11"
+last_updated: "2025-11-22"
 # vale  on
 # markdownlint-enable
 ---
@@ -31,7 +31,6 @@ Running this endpoint in PowerShell returns a [`gym`](gym.md) object with this I
 If the specific ID doesn't exist in the system, the system returns a 404 error.
 
 You can read a full tutorial on getting information about a gym in Postman [`here`](../tutorials/get-a-gym-by-id.md).
-Check out other tutorials to see what else you can do with this resource.
 
 ## URL
 
@@ -51,16 +50,15 @@ This call doesn't need request headers or a request body.
 ## Return body
 
 ```js
-[
-    {
-        "lifterId": 2,
-        "name": "Foundry Strength and Conditioning",
-        "description": "Strongman and powerlifting gym with open platform space and deadlift bars.",
-        "location": "Jersey City, NJ",
-        "rating": 4,
-        "id": 2
-    }
-]
+{
+    "lifterId": 2,
+    "name": "Foundry Strength and Conditioning",
+    "description": "Strongman and powerlifting gym with open platform space and deadlift bars.",
+    "location": "Jersey City, NJ",
+    "rating": 4,
+    "id": 2
+}
+
 ```
 
 ## Return status
