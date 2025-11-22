@@ -28,7 +28,7 @@ last_updated: "2025-11-22"
 
 # The `gym` resource
 
-![Location image](/locations.png)
+![Location image](../locations.png)
 
 Base endpoint:
 

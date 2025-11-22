@@ -28,7 +28,7 @@ last_updated: "2025-11-22"
 
 # The `lifter` resource
 
-![Lifters image](/lifters.png)
+![Lifters image](../lifters.png)
 
 Base endpoint:
 
