@@ -51,12 +51,9 @@ Take a look at the parameters for the request body in the following table.
 If you leave any parameters out,
 the system won't change them.
 
-The only obligatory parameter is `lifterID`,
-the call won't go through without it.
-
 | Parameter | Example value | Obligatory |
 | ------------- | ----------- | ----------- |
-| `lifterId` | 1 | Yes |
+| `lifterId` | 1 | No |
 |  `name` | `Iron Temple Barbell Club` | No |
 | `description` | `Pending` | No |
 |  `location` | `Newark, NJ` | No |
@@ -98,5 +95,5 @@ This request returns the whole object information with both changed and unchange
 | Status value | Return status | Description |
 | ------------- | ----------- | ----------- |
 | 200 | Success | Requested data changed successfully |
-| 404 | Error | Specified user record not found |
+| 404 | Error | Specified record not found |
 |  ECONNREFUSED | N/A | Service is offline. Start the service and try again. |
