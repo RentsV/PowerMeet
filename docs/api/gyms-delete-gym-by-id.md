@@ -24,7 +24,7 @@ last_updated: "2025-11-22"
 # markdownlint-enable
 ---
 
-# Delete a gym by ID
+# DELETE /gym{id}
 
 This action deletes a [`gym`](gym.md) specified by the `id` parameter of the `gym` resource.
 
