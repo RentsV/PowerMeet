@@ -28,6 +28,8 @@ last_updated: "2025-11-22"
 
 # The `lifter` resource
 
+![Lifters image](/docs/lifters.png)
+
 Base endpoint:
 
 ```shell
