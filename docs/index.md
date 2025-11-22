@@ -68,6 +68,8 @@ This includes tutorials for editing and deleting both lifter and gym entries.
 
 According to the interviews, most lifters don't feel comfortable using PowerShell.
 To meet their needs, these tutorials focus on using the API in Postman.
+If you want to use a shell,
+you'll find your answers in API reference docs.
 
 ## API reference docs
 

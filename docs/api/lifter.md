@@ -69,6 +69,6 @@ Sample `lifter` resource
 * [GET /lifters](lifters-get-all-lifters.md)
 * [GET /lifters{id}](lifters-get-lifter-by-id.md)
 * [POST /lifters](lifters-post-lifter.md)
-* [PUT /lifters{id}]
-* [PATCH /lifters{id}]
+* [PATCH /lifters{id}](lifters-patch-lifter.md)
+* [PUT /lifters{id}](lifters-put-lifter.md)
 * [DELETE /lifters{id}](lifters-delete-lifter-by-id.md)
