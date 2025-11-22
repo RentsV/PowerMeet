@@ -63,7 +63,11 @@ Sample `lifter` resource
 | `email` | string | The lifter's email address |
 | `id` | number | The lifter's unique record ID |
 
-## Read operations
+## Available operations
 
-* [Get all lifters](lifters-get-all-lifters.md)
-* [Get lifters by ID](lifters-get-lifter-by-id.md)
+* [GET /lifters](lifters-get-all-lifters.md)
+* [GET /lifters{id}](lifters-get-lifter-by-id.md)
+* [POST /lifters]
+* [PUT /lifters{id}]
+* [PATCH /lifters{id}]
+* [DELETE /lifters{id}]

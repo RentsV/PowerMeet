@@ -63,3 +63,12 @@ Sample `gym` resource
 | `location` | string | Location of the gym |
 | `rating` | number | Rating of the gym from 1 to 5 |
 | `id` | number | The gym's unique record ID |
+
+## Available operations
+
+* [GET /gyms](gyms-get-all-gyms.md)
+* [GET /gyms{id}](gyms-get-gym-by-id.md)
+* [POST /gyms]
+* [PUT /gyms{id}]
+* [PATCH /gyms{id}]
+* [DELETE /gyms{id}]

@@ -24,7 +24,7 @@ last_updated: "2025-11-11"
 # markdownlint-enable
 ---
 
-# The /lifters endpoint
+# GET /lifters
 
 Running the base endpoint in PowerShell with no method parameter
 returns a list of all [`lifter`](lifter.md) objects.

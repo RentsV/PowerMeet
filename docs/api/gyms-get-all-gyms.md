@@ -24,7 +24,7 @@ last_updated: "2025-11-21"
 # markdownlint-enable
 ---
 
-# The /gyms endpoint
+# GET /gyms
 
 Running the base endpoint in PowerShell with no method parameter
 returns an list of all [`gym`](gym.md) objects.

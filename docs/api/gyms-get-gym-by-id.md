@@ -24,7 +24,7 @@ last_updated: "2025-11-11"
 # markdownlint-enable
 ---
 
-# The /gyms/{id} endpoint
+# GET /gyms/{id}
 
 A `/gyms/{id}` endpoint consists of the base endpoint and an object's ID.
 Running this endpoint in PowerShell returns a [`gym`](gym.md) object with this ID.

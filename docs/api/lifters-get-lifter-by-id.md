@@ -24,7 +24,7 @@ last_updated: "2025-11-21"
 # markdownlint-enable
 ---
 
-# The /lifters/{id} endpoint
+# GET /lifters/{id}
 
 A `/lifters/{id}` endpoint consists of the base endpoint and an object's ID.
 Running this endpoint in PowerShell returns a [`lifter`](lifter.md) object with this ID.
