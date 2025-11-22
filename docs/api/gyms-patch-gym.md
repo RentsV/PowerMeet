@@ -24,7 +24,7 @@ last_updated: "2025-11-22"
 # markdownlint-enable
 ---
 
-# `PATCH /gym{id}`
+# PATCH /gym{id}
 
 This action changes a [`gym`](gym.md) object specified by the `id` parameter of the `gym` resource.
 

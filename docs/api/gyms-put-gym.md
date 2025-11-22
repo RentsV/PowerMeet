@@ -24,7 +24,7 @@ last_updated: "2025-11-22"
 # markdownlint-enable
 ---
 
-# `PUT /gym{id}`
+# PUT /gym{id}
 
 This action replaces a [`gym`](gym.md) object specified by the `id` parameter of the `gym` resource.
 If you only specify one field, the system saves other fields as empty.

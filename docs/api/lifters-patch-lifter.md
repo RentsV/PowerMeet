@@ -24,7 +24,7 @@ last_updated: "2025-11-22"
 # markdownlint-enable
 ---
 
-# `PATCH /lifter{id}`
+# PATCH /lifter{id}
 
 This action changes a [`lifter`](lifter.md) object specified by the `id` parameter of the `lifter` resource.
 
