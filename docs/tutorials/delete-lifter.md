@@ -50,7 +50,7 @@ To do so:
 2. Open the Postman app on your desktop.
 3. In the Postman app, create a new request with these values:
     * **METHOD**: DELETE
-    * **URL**: `{base_url}/lifters/{id}` where {id} is an ID number of your chosen lifter.
+    * **URL**: `{base_url}/lifters/{id}` where {id} is a numerical ID of your chosen lifter.
     * **Headers**:
         * `Content-Type: application/json`
     * **Request body**:

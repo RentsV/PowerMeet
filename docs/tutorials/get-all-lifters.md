@@ -82,3 +82,6 @@ After doing this tutorial in Postman, you might like to repeat it in
 your favorite programming language. To do this, adapt the values from
 the tutorial to the properties and arguments that the language uses to
 make REST API calls.
+
+If you would like to learn how to do this in a shell,
+read more about the [GET](/api/lifters-get-all-lifters.md) operation for this endpoint.

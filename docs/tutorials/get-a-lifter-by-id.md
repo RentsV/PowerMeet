@@ -51,7 +51,7 @@ To retrieve information about a chosen lifter:
 2. Open the Postman app on your desktop.
 3. In the Postman app, create a new request with these values:
     * **METHOD**: GET
-    * **URL**: `{base_url}/lifters/{id}` where {id} is an ID number.
+    * **URL**: `{base_url}/lifters/{id}` where {id} is a numerical ID of your chosen lifter.
     * **Headers**:
         * `Content-Type: application/json`
     * **Request body**:
@@ -73,3 +73,6 @@ After doing this tutorial in Postman, you might like to repeat it in
 your favorite programming language. To do this, adapt the values from
 the tutorial to the properties and arguments that the language uses to
 make REST API calls.
+
+If you would like to learn how to do this in a shell,
+read more about the [GET](/api/lifters-get-lifter-by-id.md) operation for this endpoint.

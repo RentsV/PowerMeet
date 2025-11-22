@@ -57,19 +57,19 @@ To edit a `lifter` entry:
 2. Open the Postman app on your desktop.
 3. In the Postman app, find the entry you want to change. It might look like this:
 
-      ```js
-        {
-            "lastName": "Johnson",
-            "firstName": "Tara",
-            "email": "tara.johnson@example.com",
-            "id": 1
-        }
-        ```
+    ```js
+    {
+        "lastName": "Johnson",
+        "firstName": "Tara",
+        "email": "tara.johnson@example.com",
+        "id": 1
+    }
+    ```
 
 4. Create a new request with these values:
 
     * **METHOD**: PUT
-    * **URL**: `{base_url}/lifters/{id}`
+    * **URL**: `{base_url}/lifters/{id}` where {id} is a numerical ID of your chosen lifter.
 
         > **Note:** Following the example, ID would be 1.
     * **Headers**:
@@ -113,19 +113,19 @@ To edit a `lifter` entry:
 2. Open the Postman app on your desktop.
 3. In the Postman app, find the entry you want to change. It might look like this:
 
-      ```js
-        {
-            "lastName": "Johnson",
-            "firstName": "Tara",
-            "email": "tara.johnson@example.com",
-            "id": 1
-        }
-        ```
+    ```js
+    {
+        "lastName": "Johnson",
+        "firstName": "Tara",
+        "email": "tara.johnson@example.com",
+        "id": 1
+    }
+    ```
 
 4. Create a new request with these values:
 
     * **METHOD**: PUT
-    * **URL**: `{base_url}/lifters/{id}`
+    * **URL**: `{base_url}/lifters/{id}` where {id} is a numerical ID of your chosen lifter.
 
         > **Note:** Following the example, ID would be 1.
     * **Headers**:

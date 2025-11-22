@@ -34,8 +34,8 @@ They cover five basic API operations:
 
 * GET - retrieves all information about the resource.
 * POST - creates a new entry.
-* PUT - replaces an existing entry with a new one.
 * PATCH - updates an existing entry.
+* PUT - replaces an existing entry with a new one.
 * DELETE - deletes an entry.
 
 First, there is a list of all `lifter` operations,
