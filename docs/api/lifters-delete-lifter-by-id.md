@@ -53,7 +53,7 @@ Another option is to run a GET call with this ´id´ to make sure that it doesn'
 
 ```js
 
-curl -X DELETE http://localhost:3000/lifters/3
+curl -X DELETE "http://localhost:3000/lifters/3"
 ```
 
 ## Return status

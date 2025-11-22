@@ -64,7 +64,7 @@ The parameter for this ID is `id`.
 
 ```js
 
-curl -X POST http://localhost:3000/gyms \
+curl -X POST "http://localhost:3000/gyms" \
   -H "Content-Type: application/json" \
   -d '{
     "lifterId": 1,

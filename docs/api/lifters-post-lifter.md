@@ -60,7 +60,7 @@ If you don't give an ID value, the system assigns an ID value itself.
 
 ```js
 
-curl -X POST http://localhost:3000/lifters \
+curl -X POST "http://localhost:3000/lifters" \
   -H "Content-Type: application/json" \
   -d '{
     "lastName": "Torvalds",
