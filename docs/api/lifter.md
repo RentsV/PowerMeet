@@ -37,11 +37,12 @@ Base endpoint:
 
 Contains information about the lifters of the service.
 
-A lifter resource describes the users associated with the gyms.
+A `lifter` resource describes the users associated with the gyms.
 Before you can create a `gym` resource in the service,
-you must create the 'lifter' resource to assign to this `gym`.
+you must create the `lifter` resource to assign to this `gym`.
 
-Learn more about the [gym resource](gym.md).
+To find out more about the gym-related information instead, 
+read the [`gym` resource page](gym.md).
 
 ## Resource properties
 

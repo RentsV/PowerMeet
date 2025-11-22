@@ -24,7 +24,7 @@ last_updated: "2025-11-22"
 # markdownlint-enable
 ---
 
-# PUT /lifter{id}
+# PUT /lifters{id}
 
 This action replaces a [`lifter`](lifter.md) object specified by the `id` parameter of the `lifter` resource.
 If you only specify one field, the system saves other fields as empty.

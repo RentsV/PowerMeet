@@ -24,7 +24,7 @@ last_updated: "2025-11-22"
 # markdownlint-enable
 ---
 
-# DELETE /lifter{id}
+# DELETE /lifters{id}
 
 This action deletes a [`lifter`](lifter.md) specified by the `id` parameter of the `lifter` resource.
 

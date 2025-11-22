@@ -44,7 +44,7 @@ Check out other tutorials to see what else you can do with this resource.
 
 | Parameter name | Type | Description |
 | -------------- | ------ | ------------ |
-| `id` | number | The record ID of the lifter to return |
+| `id` | number | The ID of the lifter to return |
 
 This call doesn't need request headers or a request body.
 
