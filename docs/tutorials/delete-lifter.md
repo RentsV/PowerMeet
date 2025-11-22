@@ -30,8 +30,6 @@ In this tutorial, you learn to run a DELETE call.
 This action deletes a [`lifter`](../api/gym.md) object
 specified by the `id` parameter of the `lifter` resource.
 
-**Note:** If you run this call with no ID, you delete all lifters in the database!!!
-
 ## Before you start
 
 Make sure you've completed the instructions in [Before you start a tutorial](../before-you-start-a-tutorial.md).
@@ -52,7 +50,7 @@ To do so:
 2. Open the Postman app on your desktop.
 3. In the Postman app, create a new request with these values:
     * **METHOD**: DELETE
-    * **URL**: `{base_url}/lifters/{id}` where {id} is an ID number.
+    * **URL**: `{base_url}/lifters/{id}` where {id} is an ID number of your chosen lifter.
     * **Headers**:
         * `Content-Type: application/json`
     * **Request body**:
