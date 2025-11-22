@@ -37,42 +37,50 @@ You can read a full tutorial on adding a new lifter in Postman [`here`](../tutor
 {server_url}/lifters
 ```
 
-## Request information
+## Request headers
 
-This call doesn't have any parameters.
-You need to specify the fields in the request body,
-otherwise it creates a `lifter` object with only an ID.
+This call uses `Content-Type: application/json` for the header.
+
+## Request body
+
+Take a look at the parameters for the request body in the following table.
+If you leave any parameters out,
+the system creates the entry without it.
+The only exception is the ID parameter.
+If you don't give an ID value, the system assigns an ID value itself.
+
+| Parameter | Example value | Obligatory |
+| ------------- | ----------- | ----------- |
+| `lastName` | `Torvalds` | No |
+|  `firstName` | `Linus` | No |
+| `email` | `linus.torvalds@example.com` | No |
+|  `id` | 5 | No |
 
 ## Example
 
 ```js
 
-curl -X POST http://localhost:3000/lifters
+curl -X POST http://localhost:3000/lifters \
+  -H "Content-Type: application/json" \
+  -d '{
+    "lastName": "Torvalds",
+    "firstName": "Linus",
+    "email": "linus.torvalds@example.com"
+    }'
 ```
 
+Here, `-H` marks the header and `-d` marks the request body.
+Backslashes make the code more easily readable.
 
 ## Return body
 
 ```js
-[
-    {
-        "lifterId": 1,
-        "name": "Iron Temple Barbell Club",
-        "description": "Powerlifting: combo racks, chalk-friendly policy, calibrated plates.",
-        "location": "Newark, NJ",
-        "rating": 5,
-        "id": 1
-        },
-    {
-        "lifterId": 2,
-        "name": "Foundry Strength and Conditioning",
-        "description": "Strongman and powerlifting gym with open platform space and deadlift bars.",
-        "location": "Jersey City, NJ",
-        "rating": 4,
-        "id": 2
-    },
-    ...
-]
+{
+    "lastName": "Torvalds",
+    "firstName": "Linus",
+    "email": "linus.torvalds@example.com",
+    "id": 5
+},
 ```
 
 ## Return status

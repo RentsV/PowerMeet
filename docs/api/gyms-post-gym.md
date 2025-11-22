@@ -37,42 +37,58 @@ You can read a full tutorial on adding a new gym in Postman [`here`](../tutorial
 {server_url}/gyms
 ```
 
-## Request information
+## Request headers
 
-This call doesn't have any parameters.
-You need to specify the fields in the request body,
-otherwise it creates a `gym` object with only an ID.
+This call uses `Content-Type: application/json` for the header.
+
+## Request body
+
+Take a look at the parameters for the request body in the following table.
+If you leave any parameters out,
+the system creates the entry without it.
+The only obligatory parameter is the `lifterId`.
+Without `lifterId`, the system returns an error.
+
+If you don't give an ID value for the gym, the system assigns this value itself.
+The parameter for this ID is `id`.
+
+| Parameter | Example value | Obligatory |
+| ------------- | ----------- | ----------- |
+| `lifterId` | 1 | Yes |
+|  `name` | `Deadlift Dungeon` | No |
+| `description` | `Strength-focused gym with calibrated plates and a deadlift-only platform.` | No |
+|  `location` | `Baltimore, MD` | No |
+|  `rating` | 5 | No |
 
 ## Example
 
 ```js
 
-curl -X POST http://localhost:3000/gyms
+curl -X POST http://localhost:3000/gyms \
+  -H "Content-Type: application/json" \
+  -d '{
+    "lifterId": 1,
+    "name": "Deadlift Dungeon",
+    "description": "Strength-focused gym with calibrated plates and a deadlift-only platform.",
+    "location": "Baltimore, MD",
+    "rating": 5
+    }'
 ```
 
+Here, `-H` marks the header and `-d` marks the request body.
+Backslashes make the code more easily readable.
 
 ## Return body
 
 ```js
-[
-    {
-        "lifterId": 1,
-        "name": "Iron Temple Barbell Club",
-        "description": "Powerlifting: combo racks, chalk-friendly policy, calibrated plates.",
-        "location": "Newark, NJ",
-        "rating": 5,
-        "id": 1
-        },
-    {
-        "lifterId": 2,
-        "name": "Foundry Strength and Conditioning",
-        "description": "Strongman and powerlifting gym with open platform space and deadlift bars.",
-        "location": "Jersey City, NJ",
-        "rating": 4,
-        "id": 2
-    },
-    ...
-]
+{
+    "lifterId": 1,
+    "name": "Deadlift Dungeon",
+    "description": "Strength-focused gym with calibrated plates and a deadlift-only platform.",
+    "location": "Baltimore, MD",
+    "rating": 5,
+    "id": 5
+} 
 ```
 
 ## Return status
