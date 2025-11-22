@@ -71,7 +71,7 @@ To edit a `lifter` entry:
     * **METHOD**: PUT
     * **URL**: `{base_url}/lifters/{id}`
 
-        > :bulb: **Note:** Following the example, ID would be 1.
+        > **Note:** Following the example, ID would be 1.
     * **Headers**:
         * `Content-Type: application/json`
     * **Request body**:
@@ -127,12 +127,13 @@ To edit a `lifter` entry:
     * **METHOD**: PUT
     * **URL**: `{base_url}/lifters/{id}`
 
-        > :bulb: **Note:** Following the example, ID would be 1.
+        > **Note:** Following the example, ID would be 1.
     * **Headers**:
         * `Content-Type: application/json`
     * **Request body**:
         You can change the values of each property as you'd like, even the ID.
         In this example, Tara is on the run and has to take on a whole new identity.
+        > **Warning:** The fields you don't mention are overwritten as empty.
 
         ```js
         {
@@ -142,8 +143,6 @@ To edit a `lifter` entry:
             "id": 6
         }
         ```
-
-        > :warning: **Warning:** The fields you don't mention are overwritten as empty.
 
 5. In the Postman app, choose **Send** to make the request.
 Watch for the response body, which should look something like this.

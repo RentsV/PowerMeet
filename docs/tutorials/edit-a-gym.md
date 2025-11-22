@@ -74,7 +74,7 @@ To edit a `gym` entry:
     * **METHOD**: PUT
     * **URL**: `{base_url}/lifters/{id}`
 
-        > :bulb: **Note:** Following the example, ID would be 4.
+        > **Note:** Following the example, ID would be 4.
     * **Headers**:
         * `Content-Type: application/json`
     * **Request body**:
@@ -135,12 +135,13 @@ To edit a `gym` entry:
     * **METHOD**: PUT
     * **URL**: `{base_url}/gyms/{id}`
 
-        > :bulb: **Note:** Following the example, ID would be 4.
+        > **Note:** Following the example, ID would be 4.
     * **Headers**:
         * `Content-Type: application/json`
     * **Request body**:
         You can change the values of each property as you'd like, even the ID.
         In this example, a bigger company bought it and changed things up.
+        > **Warning:** The fields you don't mention are overwritten as empty.
 
         ```js
         {
@@ -152,8 +153,6 @@ To edit a `gym` entry:
             "id": 4
         }
         ```
-
-        > :warning: **Warning:** The fields you don't mention are overwritten as empty.
 
 5. In the Postman app, choose **Send** to make the request.
    Watch for the response body, which should look something like this.
