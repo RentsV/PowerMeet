@@ -49,7 +49,7 @@ To do so:
 2. Open the Postman app on your desktop.
 3. In the Postman app, create a new request with these values:
     * **METHOD**: DELETE
-    * **URL**: `{base_url}/gyms/{id}` where {id} is an ID number of your chosen gym.
+    * **URL**: `{base_url}/gyms/{id}` where {id} is a numerical ID of your chosen gym.
     * **Headers**:
         * `Content-Type: application/json`
     * **Request body**:
@@ -69,3 +69,6 @@ After doing this tutorial in Postman, you might like to repeat it in
 your favorite programming language. To do this, adapt the values from
 the tutorial to the properties and arguments that the language uses to
 make REST API calls.
+
+If you would like to learn how to do this in a shell,
+read more about the [DELETE](../api/gyms-delete-gym-by-id.md) operation for this endpoint.

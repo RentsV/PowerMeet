@@ -58,21 +58,21 @@ To edit a `gym` entry:
 2. Open the Postman app on your desktop.
 3. In the Postman app, find the entry you want to change. It might look like this:
 
-      ```js
-        {
-            "lifterId": 4,
-            "name": "Garage Grind Gym",
-            "description": "Small private space focused on raw powerlifting training.",
-            "location": "Harrison, NJ",
-            "rating": 5,
-            "id": 4
-        }
-        ```
+    ```js
+    {
+        "lifterId": 4,
+        "name": "Garage Grind Gym",
+        "description": "Small private space focused on raw powerlifting training.",
+        "location": "Harrison, NJ",
+        "rating": 5,
+        "id": 4
+    }
+    ```
 
 4. Create a new request with these values:
 
     * **METHOD**: PUT
-    * **URL**: `{base_url}/lifters/{id}`
+    * **URL**: `{base_url}/lifters/{id}` where {id} is a numerical ID of your chosen gym.
 
         > **Note:** Following the example, ID would be 4.
     * **Headers**:
@@ -119,21 +119,21 @@ To edit a `gym` entry:
 2. Open the Postman app on your desktop.
 3. In the Postman app, find the entry you want to change. It might look like this:
 
-      ```js
-        {
-            "lifterId": 4,
-            "name": "Garage Grind Gym",
-            "description": "Small private space focused on raw powerlifting training.",
-            "location": "Harrison, NJ",
-            "rating": 5,
-            "id": 4
-        }
-        ```
+    ```js
+    {
+        "lifterId": 4,
+        "name": "Garage Grind Gym",
+        "description": "Small private space focused on raw powerlifting training.",
+        "location": "Harrison, NJ",
+        "rating": 5,
+        "id": 4
+    }
+    ```
 
 4. Create a new request with these values:
 
     * **METHOD**: PUT
-    * **URL**: `{base_url}/gyms/{id}`
+    * **URL**: `{base_url}/gyms/{id}` where {id} is a numerical ID of your chosen gym.
 
         > **Note:** Following the example, ID would be 4.
     * **Headers**:
