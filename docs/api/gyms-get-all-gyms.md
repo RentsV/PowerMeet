@@ -44,6 +44,13 @@ This call doesn't have any parameters.
 It also doesn't need request headers or a request body in PowerShell.
 Running this call returns a list of all gyms.
 
+## Example
+
+```js
+
+curl "http://localhost:3000/gyms"
+```
+
 ## Return body
 
 ```js

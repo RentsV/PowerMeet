@@ -47,6 +47,13 @@ You can read a full tutorial on getting information about a gym in Postman [`her
 
 This call doesn't need request headers or a request body.
 
+## Example
+
+```js
+
+curl "http://localhost:3000/gyms/2"
+```
+
 ## Return body
 
 ```js

@@ -366,11 +366,6 @@ components:
           $ref: '#/components/schemas/FirstName'
         email:
           $ref: '#/components/schemas/ContactEmail'
-      required:
-        - id
-        - lastName
-        - firstName
-        - email
       description: Represents a lifter in the system with unique ID, name, and contact email. 
         Lifters must create a `lifter` resource before adding `gym` resources.
         Once registered, there is no limit to the number of gyms that a lifter can add or manage.
@@ -384,10 +379,6 @@ components:
           $ref: '#/components/schemas/FirstName'
         email:
           $ref: '#/components/schemas/ContactEmail'
-      required:
-        - lastName
-        - firstName
-        - email
       description: Contains the data needed to create a new lifter.
         The `POST /lifters` operation uses this schema for the request body.
         The API ensures a unique `email` value and generates a unique `id` for the new lifter.
@@ -424,11 +415,6 @@ components:
           $ref: '#/components/schemas/GymId'
       required:
         - lifterId
-        - name
-        - description
-        - location
-        - rating
-        - id
       description: Represents a gym with unique lifter ID, name, 
         description, location, rating, and gym ID.
 
@@ -447,10 +433,6 @@ components:
           $ref: '#/components/schemas/GymRating'
       required:
         - lifterId
-        - name
-        - description
-        - location
-        - rating
       description: Contains the data needed to create a new gym.
         The `POST /gyms` operation uses this schema for the request body.
         The API doesn't check for duplicates, so similar gyms may exist.

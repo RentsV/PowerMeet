@@ -40,7 +40,7 @@ This way, lifters know right away if a gym has the equipment they need.
 
 Heck, no one really cares about security here, so you can even edit or delete
 all the entries without verifying your identity.
-At least in your own cloned repo, you're the king, queen, and the court.
+At least in your own cloned repo, you're the king, queen, and court.
 
 ## Quickstart
 

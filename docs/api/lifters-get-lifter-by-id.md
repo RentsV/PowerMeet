@@ -48,6 +48,13 @@ Check out other tutorials to see what else you can do with this resource.
 
 This call doesn't need request headers or a request body.
 
+## Example
+
+```js
+
+curl "http://localhost:3000/lifters/1"
+```
+
 ## Return body
 
 ```js
