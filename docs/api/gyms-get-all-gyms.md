@@ -27,7 +27,7 @@ last_updated: "2025-11-21"
 # GET /gyms
 
 Running the base endpoint in PowerShell with no method parameter
-returns an list of all [`gym`](gym.md) objects.
+returns a list of all [`gym`](gym.md) objects.
 It contains information about all the gyms registered with the service.
 
 You can read a full tutorial on retrieving this list in Postman [`here`](../tutorials/get-all-gyms.md).

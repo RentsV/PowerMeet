@@ -45,9 +45,10 @@ This action deletes a [`lifter`](lifter.md) specified by the `id` parameter of t
 
 You don't have to specify the header information and this request has no request body.
 
-This call also doesn't return anything, no matter if the call is successful or not.
-To verify that the deletion was successful, check the task list again.
-Another option is to run a GET call with this `id` to make sure that it doesn't exist anymore.
+This call also has no return body, no matter if the call is successful or not.
+The system shows the return status, either 200 or 404.
+200 means that the deletion was successful,
+404 means that it failed.
 
 ## Example
 
