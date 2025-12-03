@@ -26,7 +26,7 @@ last_updated: "2025-11-22"
 
 # POST /lifters
 
-Running the base endpoint in PowerShell with a PUT method adds a new [`lifter`](lifter.md) object.
+Running the base endpoint in PowerShell with a POST method adds a new [`lifter`](lifter.md) object.
 
 You can read a full tutorial on adding a new lifter in Postman [`here`](../tutorials/add-a-new-lifter.md).
 

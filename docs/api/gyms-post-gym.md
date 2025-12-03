@@ -26,7 +26,7 @@ last_updated: "2025-11-22"
 
 # POST /gyms
 
-Running the base endpoint in PowerShell with a PUT method adds a new [`gym`](gym.md) object.
+Running the base endpoint in PowerShell with a POST method adds a new [`gym`](gym.md) object.
 
 You can read a full tutorial on adding a new gym in Postman [`here`](../tutorials/add-a-new-gym.md).
 
