@@ -84,3 +84,18 @@ generally `http://localhost:3000`.
 
 * [The lifter resource](api/lifter.md)
 * [The gym resource](api/gym.md)
+
+## About the art
+
+All images here are created with Nano Banana.
+Since it doesn't handle text well,
+I had to fix all of them with ChatGPT.
+I decided not to alter the image where the bear has more paws than one might expect.
+Did you notice?
+
+I had two reasons to do so.
+First, this course also covers the use of AI in API documentation.
+Thus, this is a good reminder that it's important to pay attention when using it.
+
+And second ... 
+Where else would it be more suitable to have a bear with three very muscular arms than in a lifting app?
