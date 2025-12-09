@@ -87,7 +87,7 @@ generally `http://localhost:3000`.
 
 ## About the art
 
-All images here are created with Nano Banana.
+All images here were created with Nano Banana.
 Since it doesn't handle text well,
 I had to fix all of them with ChatGPT.
 I decided not to alter the image where the bear has more paws than one might expect.
